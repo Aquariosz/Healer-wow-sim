@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffd000",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                        "surface": "#1e1e1e",
+                        "border-dark": "#2D2D2D",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>HealSim - General Settings</title>
+</head>
+
+<body class="bg-background-dark font-display text-slate-100 min-h-screen">
+    <div class="flex h-screen w-full flex-col overflow-hidden">
+        <!-- Top Navigation -->
+        <header
+            class="h-16 border-b border-border-dark px-8 flex items-center justify-between sticky top-0 bg-background-dark/80 backdrop-blur-md z-10">
+            <div class="flex items-center gap-2">
+                <span class="text-slate-400 text-sm">Account Settings</span>
+                <span class="text-slate-600">/</span>
+                <span class="text-slate-100 text-sm font-medium">General</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="size-10 flex items-center justify-center rounded-lg bg-surface border border-border-dark text-slate-400">
+                    <span class="material-symbols-outlined text-xl">notifications</span>
+                </button>
+                <div class="flex items-center gap-3 pl-4 border-l border-border-dark">
+                    <div class="text-right">
+                        <p class="text-sm font-medium text-slate-100">Alex Johnson</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-tighter">Medical Staff</p>
+                    </div>
+                    <div class="size-10 rounded-full bg-primary/20 border border-primary/30" data-alt="User avatar"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFWb_K-wkVlbbLxIgvAHZvYs7JSXDk7g_v4Ew4cEuJzWb_8w4F9n790xtcfWor2yCY4VTiIV3PKaau2Rp7O2nrT3bOMDd2QK2SECr-L0pcvL7eT3MmwuKLOrqJJOPx5M_KHUe60Xh3USryi0kBprT25xMi6L_sOjSOPlehDK63Z7UIjZoqj4W3KkOPuKtqgUb5HkUaIz7Vhn5Y_KWghpzS_roXIeKkq7FA_vc245f8dWRB8X-LU0YS_sty96_jPB9MCMH2uisusB0Z'); background-size: cover;">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="flex flex-1 overflow-hidden">
+            <!-- Sidebar Navigation -->
+            <aside class="w-64 border-r border-border-dark flex flex-col bg-background-dark">
+                <div class="flex flex-col gap-6">
+                    <div class="p-6 flex items-center gap-3">
+                        <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+                            <span class="material-symbols-outlined font-bold">clinical_notes</span>
+                        </div>
+                        <h2 class="text-xl font-bold tracking-tight">HealSim</h2>
+                    </div>
+                    <nav class="flex-1 px-4 space-y-1">
+                        <div class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-primary cursor-pointer transition-colors"
+                            onclick="window.location.href='index.html'">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            <span class="text-sm font-medium">Dashboard</span>
+                        </div>
+                        <div class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-primary cursor-pointer transition-colors"
+                            onclick="window.location.href='processing.html'">
+                            <span class="material-symbols-outlined">science</span>
+                            <span class="text-sm font-medium">Simulations</span>
+                        </div>
+                        <div class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-primary cursor-pointer transition-colors"
+                            onclick="window.location.href='docs.html'">
+                            <span class="material-symbols-outlined">school</span>
+                            <span class="text-sm font-medium">Academy</span>
+                        </div>
+                        <div class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg"
+                            onclick="window.location.href='settings.html'">
+                            <span class="material-symbols-outlined">settings</span>
+                            <span class="text-sm font-medium">Settings</span>
+                        </div>
+                    </nav>
+                </div>
+                <div class="p-4 mt-auto border-t border-border-dark">
+                    <div class="bg-surface rounded-xl p-4 border border-border-dark">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Free Tier</span>
+                            <span class="text-xs text-primary font-bold">82% Used</span>
+                        </div>
+                        <div class="w-full bg-background-dark rounded-full h-1.5 mb-3 border border-border-dark">
+                            <div class="bg-primary h-1.5 rounded-full" style="width: 82%"></div>
+                        </div>
+                        <p class="text-[10px] text-slate-500 mb-3">164k / 200k interactions used</p>
+                        <button
+                            class="w-full bg-primary text-background-dark text-xs font-bold py-2 rounded-lg hover:brightness-110 transition-all">
+                            UPGRADE NOW
+                        </button>
+                    </div>
+                </div>
+            </aside>
+            <!-- Secondary Sidebar -->
+            <aside class="w-64 border-r border-border-dark hidden md:flex flex-col p-6 bg-background-dark">
+                <div class="flex flex-col mb-6">
+                    <h1 class="text-slate-100 text-lg font-bold leading-normal">Settings</h1>
+                    <p class="text-slate-400 text-xs font-normal">Manage your account preferences</p>
+                </div>
+                <nav class="flex flex-col gap-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-surface border border-border-dark text-primary"
+                        href="general_settings.html">
+                        <span class="material-symbols-outlined text-[20px]">settings</span>
+                        <span class="text-sm font-medium">General</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-surface transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">shield</span>
+                        <span class="text-sm font-medium">Security</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-surface transition-colors"
+                        href="settings.html">
+                        <span class="material-symbols-outlined text-[20px]">stars</span>
+                        <span class="text-sm font-medium">Subscription</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-surface transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                        <span class="text-sm font-medium">Billing</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-surface transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">group</span>
+                        <span class="text-sm font-medium">Team</span>
+                    </a>
+                </nav>
+            </aside>
+            <main class="flex-1 overflow-y-auto p-8 lg:p-12">
+                <div class="max-w-3xl mx-auto">
+                    <div class="mb-10">
+                        <h2 class="text-4xl font-black tracking-tight text-slate-900 dark:text-slate-100">General
+                            Settings</h2>
+                        <p class="text-slate-500 dark:text-slate-400 mt-2">Manage your account details and game
+                            preferences for the best simulation experience.</p>
+                    </div>
+                    <!-- Profile Header -->
+                    <div
+                        class="flex flex-col @md:flex-row gap-6 items-start @md:items-center justify-between p-6 rounded-xl bg-surface border border-border-dark mb-10 shadow-xl">
+                        <div class="flex gap-6 items-center">
+                            <div class="h-24 w-24 rounded-full border-4 border-primary/20 overflow-hidden bg-background-dark"
+                                data-alt="Large circular profile image frame">
+                                <img alt="Large Avatar" class="w-full h-full object-cover"
+                                    data-alt="Detailed user profile portrait picture"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuARaGKBcPvDbDlaFpnn9e32bSfMzCK8Y2NR97Nk_soe-mKdE9dEbd-LzaVWk4iIdVLDl4iLP-yTjGTsZx1E8aquYCrfplX5UU_b0Bg2im102tl5ySk1X4Y_K1z4dW-GoMrDGmEiDMkX4EVJPzKDv3jFHZvryw2eOpysXfSZGT7trc_hun_xceA91cgHZ0Xec2ZcRUEjcrSMybnem83lfij-y9uSWItgH18PWu_6cWQJ-tkNW2oeVOoD-PDMJGPNgIRtAlNwFheL-rB2" />
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="text-2xl font-bold text-slate-900 dark:text-slate-100 leading-tight">Alex
+                                    Johnson</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm">Premium Member since 2023</p>
+                            </div>
+                        </div>
+                        <button
+                            class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary/10 border border-primary/20 text-slate-100 text-sm font-bold hover:bg-primary/20 transition-all">
+                            Change Avatar
+                        </button>
+                    </div>
+                    <!-- Settings Sections -->
+                    <section class="space-y-10">
+                        <!-- Account Info -->
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">person</span>
+                                Account Information
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Display
+                                        Name</label>
+                                    <input
+                                        class="w-full bg-background-dark border border-border-dark rounded-lg p-3 text-slate-100 focus:ring-primary focus:border-primary transition-all"
+                                        type="text" value="Alex Johnson" />
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Email
+                                        Address</label>
+                                    <input
+                                        class="w-full bg-background-dark border border-border-dark rounded-lg p-3 text-slate-100 focus:ring-primary focus:border-primary transition-all"
+                                        type="email" value="alex.j@healsim.com" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Preferences -->
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">translate</span>
+                                Preferences
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Interface
+                                        Language</label>
+                                    <select
+                                        class="w-full bg-background-dark border border-border-dark rounded-lg p-3 text-slate-100 focus:ring-primary focus:border-primary transition-all">
+                                        <option selected="" value="en">English (US)</option>
+                                        <option value="es">Español</option>
+                                        <option value="fr">Français</option>
+                                        <option value="de">Deutsch</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Game
+                                        Region</label>
+                                    <select
+                                        class="w-full bg-background-dark border border-border-dark rounded-lg p-3 text-slate-100 focus:ring-primary focus:border-primary transition-all">
+                                        <option selected="" value="na">North America - East</option>
+                                        <option value="eu">Europe - West</option>
+                                        <option value="asia">Asia - Tokyo</option>
+                                        <option value="oce">Oceania - Sydney</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2 mt-10">
+                                <span class="material-symbols-outlined text-primary">link</span>
+                                Connected Accounts
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Discord Card -->
+                                <div
+                                    class="flex items-center justify-between p-4 rounded-xl bg-surface border border-border-dark">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                            <span class="material-symbols-outlined">forum</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <p class="font-bold text-slate-900 dark:text-slate-100 text-sm">Discord</p>
+                                            <p class="text-slate-500 dark:text-slate-400 text-xs">Not Connected</p>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="px-4 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-slate-100 text-xs font-bold hover:bg-primary/20 transition-all">
+                                        Connect
+                                    </button>
+                                </div>
+                                <!-- Patreon Card -->
+                                <div
+                                    class="flex items-center justify-between p-4 rounded-xl bg-surface border border-border-dark">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                            <span class="material-symbols-outlined">volunteer_activism</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <p class="font-bold text-slate-900 dark:text-slate-100 text-sm">Patreon</p>
+                                            <p class="text-slate-500 dark:text-slate-400 text-xs">Not Connected</p>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="px-4 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-slate-100 text-xs font-bold hover:bg-primary/20 transition-all">
+                                        Connect
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Region Map Placeholder -->
+                        <div
+                            class="rounded-xl overflow-hidden bg-surface border border-border-dark h-48 relative shadow-lg">
+                            <div class="absolute inset-0 opacity-20 pointer-events-none"
+                                data-alt="Technical grid background pattern"
+                                style="background-image: radial-gradient(circle at 2px 2px, #ffd000 1px, transparent 0); background-size: 24px 24px;">
+                            </div>
+                            <div class="flex items-center justify-center h-full flex-col text-slate-400">
+                                <span class="material-symbols-outlined text-4xl mb-2">public</span>
+                                <p class="text-sm font-medium">Map View: North America - East</p>
+                                <span class="text-xs opacity-60">Connected to US-VA-1 Data Center</span>
+                            </div>
+                            <div class="hidden" data-location="New York" style=""></div>
+                        </div>
+                        <!-- Action Buttons -->
+                        <div class="pt-6 border-t border-border-dark flex justify-end gap-4">
+                            <button
+                                class="px-6 py-2 rounded-lg text-sm font-bold border border-transparent hover:border-border-dark text-slate-400 hover:text-slate-100 transition-colors">
+                                Reset Changes
+                            </button>
+                            <button
+                                class="px-8 py-2 rounded-lg bg-primary text-background-dark text-sm font-bold shadow-lg shadow-primary/20 hover:brightness-110 transition-all">
+                                Save Changes
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

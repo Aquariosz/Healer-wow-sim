@@ -1,0 +1,46 @@
+{
+  "class": "Evoker",
+  "spec": "Preservation",
+  "role": "HEALER",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "evoker.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [
+      { "id": 363534, "name": "Rewind", "cooldown": 240, "notes": "Restores allies to their state 5s ago. 2min talented" },
+      { "id": 370960, "name": "Emerald Communion", "cooldown": 180, "notes": "Major healing channel. Talented" }
+    ],
+    "externals": [
+      { "id": 357170, "name": "Time Dilation", "cooldown": 60, "notes": "Target staggers 50% of damage over 8-10s. 2 charges talented" },
+      { "id": 378441, "name": "Spatial Paradox", "cooldown": 180, "notes": "1 Healer can move and cast for 10s. Talented" }
+    ],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      { "id": 359816, "name": "Dreamflight", "cooldown": 120, "notes": "Fly forward healing allies. Talented. Choice node with Stasis" },
+      { "id": 370537, "name": "Stasis", "cooldown": 90, "notes": "Store 3 healing spells to release at once. Talented. Choice node with Dreamflight" }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "specOverrides": {
+    "dispels": {
+      "365585": { "notes": "Poison + Magic on friendly target. Preservation adds Magic" }
+    }
+  },
+  "removedAbilities": [
+    { "name": "Spiritbloom", "reason": "Reworked in Midnight" },
+    { "name": "Temporal Anomaly", "reason": "Removed in Midnight" }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with evoker.json for full ability list",
+    "Rewind is the signature Preservation raid CD",
+    "Time Dilation is a unique external — damage staggering mechanic",
+    "Dreamflight and Stasis are on a choice node — only one active",
+    "Expunge gains Magic dispel for Preservation (see specOverrides)"
+  ]
+}

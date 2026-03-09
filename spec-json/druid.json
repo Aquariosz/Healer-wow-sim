@@ -1,0 +1,134 @@
+{
+  "class": "Druid",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 22812,
+        "name": "Barkskin",
+        "cooldown": 60,
+        "notes": "20-30% DR for 8-12s, +20% healing taken"
+      },
+      {
+        "id": 22842,
+        "name": "Frenzied Regeneration",
+        "cooldown": 36,
+        "notes": "24% heal, +20% healing taken. DotC: can cast in cat form"
+      },
+      {
+        "id": 319454,
+        "name": "Heart of the Wild",
+        "cooldown": 120,
+        "notes": "+30% max health for 20s in Bear Form. Talented"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 106898,
+        "name": "Stampeding Roar",
+        "cooldown": 120,
+        "notes": "60% raid movement speed for 6s. DotC: +25% dur"
+      }
+    ],
+    "externals": [
+      {
+        "id": 29166,
+        "name": "Innervate",
+        "cooldown": 180,
+        "notes": "Healer spells cost no mana for 8s. Talented"
+      }
+    ],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 2908,
+        "name": "Soothe",
+        "cooldown": 10,
+        "notes": "Enrage on enemy target"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 1850,
+        "name": "Dash",
+        "cooldown": 120,
+        "notes": "70% speed in cat form for 10s"
+      },
+      {
+        "id": 252216,
+        "name": "Tiger Dash",
+        "cooldown": 45,
+        "notes": "200% decaying speed. Talented. Replaces Dash"
+      },
+      {
+        "id": 102401,
+        "name": "Wild Charge",
+        "cooldown": 15,
+        "notes": "Various movement based on form. Talented"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 20484,
+        "name": "Rebirth",
+        "cooldown": 600,
+        "notes": "Battle rez"
+      },
+      {
+        "id": 1126,
+        "name": "Mark of the Wild",
+        "cooldown": 0,
+        "notes": "+3% Versatility raid buff"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 5211,
+        "name": "Mighty Bash",
+        "cooldown": 60,
+        "notes": "4s ST stun. Talented"
+      },
+      {
+        "id": 33786,
+        "name": "Cyclone",
+        "cooldown": 0,
+        "notes": "5s disorient, target immune to damage"
+      },
+      {
+        "id": 99,
+        "name": "Incapacitating Roar",
+        "cooldown": 30,
+        "notes": "3s AoE incap. Talented"
+      },
+      {
+        "id": 102359,
+        "name": "Mass Entanglement",
+        "cooldown": 30,
+        "notes": "10s AoE root. Talented"
+      },
+      {
+        "id": 102793,
+        "name": "Ursol's Vortex",
+        "cooldown": 60,
+        "notes": "Pulls and slows enemies. Wildstalker: 3s root. Talented"
+      },
+      {
+        "id": 132469,
+        "name": "Typhoon",
+        "cooldown": 30,
+        "notes": "Knockback. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Druid specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

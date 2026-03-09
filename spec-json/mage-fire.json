@@ -1,0 +1,70 @@
+{
+  "class": "Mage",
+  "spec": "Fire",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "mage.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 235313,
+        "name": "Blazing Barrier",
+        "cooldown": 30,
+        "notes": "Shield + heals for 15% of dmg taken. Sunfury: heal remains 8s after break"
+      },
+      {
+        "id": 86949,
+        "name": "Cauterize",
+        "cooldown": 300,
+        "notes": "Cheat death — prevents fatal blow. Passive. Fire only"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 190319,
+        "name": "Combustion",
+        "cooldown": 120,
+        "notes": "Primary DPS CD. Guaranteed crits"
+      },
+      {
+        "id": 153561,
+        "name": "Meteor",
+        "cooldown": 45,
+        "notes": "AoE impact. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": [
+      {
+        "id": 120,
+        "name": "Cone of Cold",
+        "cooldown": 25,
+        "notes": "50% AoE slow for 8s. Fire: can be reset with Cauterize"
+      }
+    ]
+  },
+  "removedAbilities": [
+    {
+      "name": "Living Bomb (old)",
+      "reason": "Reworked in Midnight"
+    },
+    {
+      "name": "Flame Patch",
+      "reason": "Removed / baseline in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with mage.json for full ability list",
+    "Cauterize is a passive cheat death — not tracked as active cast. Also resets some CC abilities",
+    "Fire has above-average execute capability via Hot Streak and Scorch mechanics",
+    "Sunfury hero talent: Phoenix auto-casts Spellsteal twice"
+  ]
+}

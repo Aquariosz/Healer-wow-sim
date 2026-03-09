@@ -1,0 +1,58 @@
+{
+  "class": "Druid",
+  "spec": "Guardian",
+  "role": "TANK",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "druid.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 61336,
+        "name": "Survival Instincts",
+        "cooldown": 180,
+        "notes": "50-60% DR for 6s"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 106839,
+        "name": "Skull Bash",
+        "cooldown": 15,
+        "notes": "13-18 yard range"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 2782,
+        "name": "Remove Corruption",
+        "cooldown": 8,
+        "notes": "Curse + Poison on friendly target. Non-Resto"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Thorns",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Berserk: Ravage",
+      "reason": "Reworked for Guardian in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with druid.json for full ability list",
+    "Bear Form (5487) provides +25-45% max health passively — not tracked as a CD",
+    "Druid of the Claw hero talent adds 6% magic DR in Bear Form and heal on damage taken",
+    "Innervate is technically a healer external — listed here since Guardian can cast it"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "class": "Shaman",
+  "spec": "Elemental",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "shaman.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 192077,
+        "name": "Wind Rush Totem",
+        "cooldown": 120,
+        "notes": "40-50% raid speed for 5-7s. Talented"
+      }
+    ],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 51886,
+        "name": "Cleanse Spirit",
+        "cooldown": 8,
+        "notes": "Curse on friendly target. Non-Resto"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 114050,
+        "name": "Ascendance",
+        "cooldown": 180,
+        "notes": "Primary DPS CD. Talented"
+      },
+      {
+        "id": 191634,
+        "name": "Stormkeeper",
+        "cooldown": 60,
+        "notes": "Empowers next 2 Lightning Bolts/Chain Lightnings"
+      }
+    ],
+    "utility": [
+      {
+        "id": 2825,
+        "name": "Bloodlust",
+        "cooldown": 300,
+        "notes": "Raid haste CD (Heroism)"
+      },
+      {
+        "id": 462854,
+        "name": "Skyfury",
+        "cooldown": 0,
+        "notes": "2% mastery + 20% auto-attack proc. Raid buff"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 51490,
+        "name": "Thunderstorm",
+        "cooldown": 30,
+        "notes": "Knockback. Ele only"
+      }
+    ]
+  },
+  "removedAbilities": [
+    {
+      "name": "Earthquake (old totem version)",
+      "reason": "Reworked in Midnight"
+    },
+    {
+      "name": "Echoing Shock",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with shaman.json for full ability list",
+    "Ele has Thunderstorm (knockback) which other Shaman specs don't",
+    "Ancestral Swiftness is a Farseer hero talent — instant cast",
+    "Stormbringer hero talent: Stormkeeper at 30s CD",
+    "Reincarnation is passive self-rez, not an active defensive cast"
+  ]
+}

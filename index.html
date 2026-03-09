@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>HealSim - WoW Healer Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script>const whTooltips = { colorLinks: false, iconizeLinks: true, renameLinks: false };</script>
+    <script src="https://wow.zamimg.com/widgets/power.js"></script>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Top Navigation / Class Selector -->
+        <header class="topbar">
+            <div class="logo">
+                <span class="logo-gold">Heal</span>Sim
+            </div>
+            <div class="class-selector">
+                <button class="class-btn active" id="btn-priest">
+                    <img src="assets/holy_priest_icon.png" alt="Holy Priest" class="class-icon">
+                    <span>Holy Priest</span>
+                </button>
+                <button class="class-btn" id="btn-evoker">
+                    <img src="assets/evoker_icon.png" alt="Preservation Evoker" class="class-icon">
+                    <span>Preservation Evoker</span>
+                </button>
+            </div>
+            <div class="user-profile">
+                <!-- User placeholder -->
+                <div class="avatar"></div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Center Panel -->
+            <main class="center-panel">
+                <section class="simulation-options-section">
+                    <h2 class="section-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-right: 8px; vertical-align: middle;">
+                            <polyline points="9 11 12 14 22 4"></polyline>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                        Simulation Options
+                    </h2>
+
+                    <div class="sim-options-grid">
+                        <div class="sim-option-group">
+                            <label for="fight-style">Fight Style</label>
+                            <select id="fight-style" class="sim-dropdown">
+                                <option value="Dungeon">Mythic+ (5-man)</option>
+                                <option value="Raid">Raid (20-man)</option>
+                            </select>
+                            <span class="option-hint">Scales base healing throughput & AoE effectiveness.</span>
+                        </div>
+
+                        <div class="sim-option-group">
+                            <label for="fight-length">Fight Length</label>
+                            <select id="fight-length" class="sim-dropdown">
+                                <option value="120">2 minutes (Quick Boss / Trash)</option>
+                                <option value="180" selected>3 minutes (Average M+ Boss)</option>
+                                <option value="300">5 minutes (Raid Boss / Tyrannical)</option>
+                                <option value="420">7 minutes (End Boss)</option>
+                            </select>
+                            <span class="option-hint">Longer fights heavily tax Mana Efficiency.</span>
+                        </div>
+
+                        <div class="sim-option-group" style="grid-column: span 2;">
+                            <label for="healing-requirement">Primary Healing Requirement</label>
+                            <select id="healing-requirement" class="sim-dropdown">
+                                <option value="Balanced" selected>Balanced Profile (Mix of all)</option>
+                                <option value="Spot">Spot Healing (Heavy Single Target tank/player damage)</option>
+                                <option value="Burst">Burst Healing (Sudden massive AoE drops)</option>
+                                <option value="Sustain">Sustain Healing (Heavy continuous aura damage rot)</option>
+                                <option value="Ramp">Ramp Healing (Large predictable hits requiring setup)</option>
+                            </select>
+                            <span class="option-hint">Dictates efficiency based on Class Toolkit & Talents.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="simulation-config-section">
+                    <div class="section-header-row">
+                        <h2 class="section-title">Player Configuration</h2>
+                        <button id="btn-load-stats" class="btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Load Real Stats from Log
+                        </button>
+                    </div>
+
+                    <div class="config-grid">
+                        <!-- Stats Column / SimC Import -->
+                        <div>
+                            <div class="stats-panel" id="simc-import-section">
+                                <h3 class="panel-subtitle"
+                                    style="display: flex; justify-content: space-between; align-items: center;">
+                                    Import /simc Output
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" style="color: var(--gold);">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                </h3>
+                                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Paste your
+                                    SimulationCraft output below to load your Equipped Gear, Bags, and Great Vault.</p>
+                                <textarea id="simc-input-text" class="stat-input"
+                                    style="width: 100%; height: 120px; font-family: monospace; resize: vertical; padding: 0.5rem; border-color: var(--gold);"
+                                    placeholder="Paste SimC text here..."></textarea>
+                                <button id="btn-import-simc" class="btn-primary"
+                                    style="width: 100%; margin-top: 1rem; padding: 0.75rem;">Import Gear &
+                                    Talents</button>
+                            </div>
+
+                            <div class="stats-panel" style="margin-top: 1.5rem; opacity: 0.7;">
+                                <h3 class="panel-subtitle">Manual Stat Overrides</h3>
+
+                                <div class="stat-row"
+                                    style="border-bottom: 1px solid var(--border-metal); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                                    <label style="color: var(--gold);">Stat Profile</label>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <label
+                                            style="color: var(--text-main); width: 80px; text-align: center;">Base</label>
+                                        <label style="color: #4ade80; width: 80px; text-align: center;">+Item</label>
+                                    </div>
+                                </div>
+                                <div class="stat-row">
+                                    <label>Intellect</label>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <input type="number" id="base-intellect" class="stat-input" style="width: 80px;"
+                                            value="14500">
+                                        <input type="number" id="upg-intellect" class="stat-input"
+                                            style="width: 80px; border-color: rgba(74, 222, 128, 0.5); color: #4ade80;"
+                                            value="0">
+                                    </div>
+                                </div>
+                                <div class="stat-row">
+                                    <label>Haste Rating</label>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <input type="number" id="base-haste" class="stat-input" style="width: 80px;"
+                                            value="4200">
+                                        <input type="number" id="upg-haste" class="stat-input"
+                                            style="width: 80px; border-color: rgba(74, 222, 128, 0.5); color: #4ade80;"
+                                            value="0">
+                                    </div>
+                                </div>
+                                <div class="stat-row">
+                                    <label>Critical Strike</label>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <input type="number" id="base-crit" class="stat-input" style="width: 80px;"
+                                            value="3800">
+                                        <input type="number" id="upg-crit" class="stat-input"
+                                            style="width: 80px; border-color: rgba(74, 222, 128, 0.5); color: #4ade80;"
+                                            value="0">
+                                    </div>
+                                </div>
+                                <div class="stat-row">
+                                    <label>Mastery</label>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <input type="number" id="base-mastery" class="stat-input" style="width: 80px;"
+                                            value="2100">
+                                        <input type="number" id="upg-mastery" class="stat-input"
+                                            style="width: 80px; border-color: rgba(74, 222, 128, 0.5); color: #4ade80;"
+                                            value="0">
+                                    </div>
+                                </div>
+                                <div class="stat-row">
+                                    <label>Versatility</label>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <input type="number" id="base-versatility" class="stat-input"
+                                            style="width: 80px;" value="1500">
+                                        <input type="number" id="upg-versatility" class="stat-input"
+                                            style="width: 80px; border-color: rgba(74, 222, 128, 0.5); color: #4ade80;"
+                                            value="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Talents Column -->
+                    <div class="talents-panel">
+                        <h3 class="panel-subtitle">Talents & Synergies</h3>
+
+                        <!-- Visual Talent Calculator -->
+                        <div class="talent-calculator-panel mt-4">
+                            <div class="section-header-row">
+                                <h2 class="section-title">Talent Trees</h2>
+                            </div>
+                            <div class="talent-tree-container"
+                                style="display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 1rem;">
+
+                                <!-- Panel 1: Class Tree -->
+                                <div class="tree-panel"
+                                    style="flex: 1; min-width: 250px; background: rgba(0,0,0,0.2); border-radius: 8px; padding: 1rem;">
+                                    <div
+                                        style="text-align: center; color: var(--gold); margin-bottom: 1rem; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">
+                                        Priest</div>
+                                    <div class="talent-grid class-grid" style="position: relative;">
+                                        <svg class="talent-connections" id="class-links-svg"
+                                            style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0;"></svg>
+                                        <div id="priest-class-tree"
+                                            style="position:relative; z-index:1; display:grid; grid-template-columns: repeat(9, 1fr); gap: 0.5rem;">
+                                        </div>
+                                    </div>
+                                    <div class="talent-points-counter" style="text-align: center; margin-top: 1rem;">
+                                        <span id="class-points-spent">0</span> / 31
+                                    </div>
+                                </div>
+
+                                <!-- Panel 2: Hero Tree -->
+                                <div class="tree-panel hero-panel"
+                                    style="flex: 0.8; min-width: 200px; background: rgba(0,0,0,0.2); border-radius: 8px; padding: 1rem; border: 1px solid rgba(255, 215, 0, 0.3);">
+                                    <div style="text-align: center; color: var(--gold); margin-bottom: 1rem;">
+                                        <select id="hero-talent-select" class="hero-talent-dropdown"
+                                            style="background: transparent; border: none; color: var(--gold); font-size: 1rem; font-weight: bold; cursor: pointer; outline: none; text-align: center; text-transform: uppercase;">
+                                            <option value="archon">Archon</option>
+                                            <option value="oracle">Oracle</option>
+                                        </select>
+                                    </div>
+                                    <div class="talent-grid hero-grid" style="position: relative;">
+                                        <svg class="talent-connections" id="hero-links-svg"
+                                            style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0;"></svg>
+                                        <div id="hero-talent-tree"
+                                            style="position:relative; z-index:1; display:grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Panel 3: Spec Tree -->
+                                <div class="tree-panel"
+                                    style="flex: 1; min-width: 250px; background: rgba(0,0,0,0.2); border-radius: 8px; padding: 1rem;">
+                                    <div
+                                        style="text-align: center; color: var(--gold); margin-bottom: 1rem; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">
+                                        Holy</div>
+                                    <div class="talent-grid spec-grid" style="position: relative;">
+                                        <svg class="talent-connections" id="spec-links-svg"
+                                            style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0;"></svg>
+                                        <div id="holy-spec-tree"
+                                            style="position:relative; z-index:1; display:grid; grid-template-columns: repeat(9, 1fr); gap: 0.5rem;">
+                                        </div>
+                                    </div>
+                                    <div class="talent-points-counter" style="text-align: center; margin-top: 1rem;">
+                                        <span id="spec-points-spent">0</span> / 30
+                                    </div>
+                                </div> <!-- Closes tree-panel -->
+
+                            </div> <!-- Closes talent-tree-container -->
+                        </div> <!-- Closes talent-calculator-panel -->
+                    </div> <!-- Closes talents-panel -->
+        </div> <!-- Closes config-grid -->
+
+        <!-- Full Width Top Gear Grid (Raidbots Style) -->
+        <div id="top-gear-section"
+            style="display: none; margin-top: 2rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border-metal); border-radius: 8px; padding: 1.5rem;">
+            <div class="section-header-row"
+                style="margin-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.5rem;">
+                <h2 class="section-title" style="color: var(--gold); font-size: 1.2rem;">Top Gear Selection</h2>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Select multiple pieces of gear to simulate
+                    upgrades</span>
+            </div>
+
+            <div id="gear-list-container" class="raidbots-gear-grid">
+                <!-- JS will inject slot groups and gear cards here -->
+            </div>
+        </div>
+
+        <div class="action-row">
+            <button class="btn-analyze" id="btn-simulate">
+                Run Simulation
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+            </button>
+        </div>
+        </section>
+        </main>
+
+        <!-- Right Panel -->
+        <aside class="right-panel">
+            <div class="panel-header">
+                <h2>Upgrade Results</h2>
+            </div>
+
+            <div class="results-container">
+                <!-- Progress Card -->
+                <div class="result-card performance-card">
+                    <div class="card-title">Healing Output</div>
+
+                    <div class="metric-row">
+                        <span class="metric-label">Real HPS</span>
+                        <span class="metric-value real-value">124.5k</span>
+                    </div>
+
+                    <div class="progress-track" title="Real HPS Output">
+                        <div class="progress-fill real-fill" style="width: 0%;"></div>
+                    </div>
+
+                    <div class="metric-row mt-4">
+                        <span class="metric-label highlight-gold">Upgrade HPS</span>
+                        <div style="display: flex; gap: 0.5rem; align-items: baseline;">
+                            <span class="metric-value potential-value">142.8k</span>
+                            <span id="upgrade-diff-text"
+                                style="color: #4ade80; font-size: 0.9rem; font-weight: 500;"></span>
+                        </div>
+                    </div>
+
+                    <div class="progress-track potential-track" title="Upgrade HPS Output">
+                        <div class="progress-fill potential-fill" style="width: 0%;">
+                            <div class="progress-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="efficiency-score">
+                        <span>Efficiency</span>
+                        <span class="score-value">87.1%</span>
+                    </div>
+                </div>
+
+                <!-- Details Card -->
+                <div class="result-card details-card">
+                    <div class="card-title">Key Insights</div>
+                    <ul class="insights-list">
+                        <li>
+                            <div class="insight-icon warning"></div>
+                            <div class="insight-text">Missed 2x Power Word: Life</div>
+                        </li>
+                        <li>
+                            <div class="insight-icon info"></div>
+                            <div class="insight-text">Overhealing is 15% higher than optimal</div>
+                        </li>
+                        <li>
+                            <div class="insight-icon success"></div>
+                            <div class="insight-text">Divine Hymn timing was perfect</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+    </div>
+
+    <!-- JavaScript Base -->
+    <script src="simc_parser.js"></script>
+    <script src="talents.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

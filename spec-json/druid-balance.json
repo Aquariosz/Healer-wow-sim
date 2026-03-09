@@ -1,0 +1,70 @@
+{
+  "class": "Druid",
+  "spec": "Balance",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "druid.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 78675,
+        "name": "Solar Beam",
+        "cooldown": 60,
+        "notes": "40-45 yard range. 45s talented"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 2782,
+        "name": "Remove Corruption",
+        "cooldown": 8,
+        "notes": "Curse + Poison on friendly target"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 194223,
+        "name": "Celestial Alignment",
+        "cooldown": 180,
+        "notes": "Primary DPS CD. OR Incarnation talented"
+      },
+      {
+        "id": 102560,
+        "name": "Incarnation: Chosen of Elune",
+        "cooldown": 180,
+        "notes": "Replaces CA. Talented"
+      },
+      {
+        "id": 391528,
+        "name": "Convoke the Spirits",
+        "cooldown": 120,
+        "notes": "Channel 16 random spells. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Starfall (old version)",
+      "reason": "Reworked into new form in Midnight"
+    },
+    {
+      "name": "Fury of Elune",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with druid.json for full ability list",
+    "Bear Form (5487) provides +25-45% max health — Balance druids can shift defensively",
+    "Celestial Alignment and Incarnation are on a choice node — only one is active",
+    "Convoke the Spirits is talented — may or may not be taken"
+  ]
+}

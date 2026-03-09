@@ -1,0 +1,111 @@
+{
+  "class": "Warrior",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 23920,
+        "name": "Spell Reflection",
+        "cooldown": 25,
+        "notes": "20% magic DR for 5s + reflect. Talented"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 97462,
+        "name": "Rallying Cry",
+        "cooldown": 180,
+        "notes": "+10% max health to raid for 10-12s"
+      }
+    ],
+    "externals": [
+      {
+        "id": 3411,
+        "name": "Intervene",
+        "cooldown": 25,
+        "notes": "Intercepts all auto attacks on target for 6s. Mountain Thane: gives shield"
+      }
+    ],
+    "interrupts": [
+      {
+        "id": 6552,
+        "name": "Pummel",
+        "cooldown": 15,
+        "notes": "Melee range"
+      }
+    ],
+    "dispels": [],
+    "movementCooldowns": [
+      {
+        "id": 100,
+        "name": "Charge",
+        "cooldown": 20,
+        "notes": "Charge to target. 2 charges"
+      },
+      {
+        "id": 6544,
+        "name": "Heroic Leap",
+        "cooldown": 45,
+        "notes": "Leap to target location"
+      }
+    ],
+    "offensiveCooldowns": [
+      {
+        "id": 107574,
+        "name": "Avatar",
+        "cooldown": 90,
+        "notes": "20% damage increase. Talented choice"
+      }
+    ],
+    "utility": [
+      {
+        "id": 6673,
+        "name": "Battle Shout",
+        "cooldown": 0,
+        "notes": "+5% Agi/Str raid buff"
+      },
+      {
+        "id": 18499,
+        "name": "Berserker Rage",
+        "cooldown": 60,
+        "notes": "Break all Fear effects from nearby allies"
+      },
+      {
+        "id": 64382,
+        "name": "Shattering Throw",
+        "cooldown": 180,
+        "notes": "Break immunities. Bonus shield damage"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 107570,
+        "name": "Storm Bolt",
+        "cooldown": 30,
+        "notes": "4s ranged stun. Talented"
+      },
+      {
+        "id": 46968,
+        "name": "Shockwave",
+        "cooldown": 40,
+        "notes": "2s AoE stun. Colossus: +5s CDR. Talented"
+      },
+      {
+        "id": 5246,
+        "name": "Intimidating Shout",
+        "cooldown": 90,
+        "notes": "8s AoE fear"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Warrior specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "class": "Monk",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 115203,
+        "name": "Fortifying Brew",
+        "cooldown": 180,
+        "notes": "20-30% max health + 20-30% DR for 6s. Talented"
+      },
+      {
+        "id": 122278,
+        "name": "Dampen Harm",
+        "cooldown": 120,
+        "notes": "Reduces large hits by 20-50%. Talented"
+      },
+      {
+        "id": 122783,
+        "name": "Diffuse Magic",
+        "cooldown": 90,
+        "notes": "60% magic DR for 6s. Talented"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [
+      {
+        "id": 116841,
+        "name": "Tiger's Lust",
+        "cooldown": 30,
+        "notes": "Root removal + 70% speed for 6s on ally"
+      }
+    ],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [
+      {
+        "id": 109132,
+        "name": "Roll",
+        "cooldown": 20,
+        "notes": "2 charges. Forward roll"
+      },
+      {
+        "id": 116841,
+        "name": "Tiger's Lust",
+        "cooldown": 30,
+        "notes": "Root removal + 70% speed for 6s"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 1126,
+        "name": "Mystic Touch",
+        "cooldown": 0,
+        "notes": "+5% physical damage taken debuff"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 119381,
+        "name": "Leg Sweep",
+        "cooldown": 60,
+        "notes": "3s AoE stun + 50% slow for 5s. Talented"
+      },
+      {
+        "id": 115078,
+        "name": "Paralysis",
+        "cooldown": 45,
+        "notes": "1min incap on any target. With Pressure Points: removes Enrage"
+      },
+      {
+        "id": 198898,
+        "name": "Song of Chi-Ji",
+        "cooldown": 30,
+        "notes": "20s AoE disorient"
+      },
+      {
+        "id": 116844,
+        "name": "Ring of Peace",
+        "cooldown": 45,
+        "notes": "Knockback enemies from area. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Monk specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

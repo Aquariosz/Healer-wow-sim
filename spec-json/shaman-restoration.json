@@ -1,0 +1,137 @@
+{
+  "class": "Shaman",
+  "spec": "Restoration",
+  "role": "HEALER",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "shaman.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 198103,
+        "name": "Spirit Wolf",
+        "cooldown": 0,
+        "notes": "5% DR per sec in Ghost Wolf up to 20%. Talented passive"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 108280,
+        "name": "Healing Tide Totem",
+        "cooldown": 180,
+        "notes": "Pulsing AoE heal for 10s. Choice node with Ascendance"
+      },
+      {
+        "id": 114052,
+        "name": "Ascendance",
+        "cooldown": 180,
+        "notes": "Water Ascendant for 15s. Choice node with HTT"
+      },
+      {
+        "id": 98008,
+        "name": "Spirit Link Totem",
+        "cooldown": 180,
+        "notes": "Health redistribution among nearby allies for 6s"
+      }
+    ],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 77130,
+        "name": "Purify Spirit",
+        "cooldown": 8,
+        "notes": "Magic + Curse on friendly target"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 79206,
+        "name": "Spiritwalker's Grace",
+        "cooldown": 120,
+        "notes": "Cast while moving for 15s"
+      },
+      {
+        "id": 192077,
+        "name": "Wind Rush Totem",
+        "cooldown": 120,
+        "notes": "40-50% movement speed to raid for 5-7s. Talented"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 2645,
+        "name": "Ghost Wolf",
+        "cooldown": 0,
+        "notes": "30% movement speed in wolf form"
+      },
+      {
+        "id": 378081,
+        "name": "Nature's Swiftness",
+        "cooldown": 90,
+        "notes": "Next spell instant + free"
+      }
+    ],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "id": 8004,
+      "name": "Healing Surge",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "id": 157153,
+      "name": "Cloudburst Totem",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "id": 207399,
+      "name": "Ancestral Protection Totem",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "id": 198838,
+      "name": "Earthen Wall Totem",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "id": 108270,
+      "name": "Stone Bulwark Totem",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "id": 108285,
+      "name": "Totemic Recall",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "id": 51490,
+      "name": "Thunderstorm",
+      "reason": "Removed for Resto in Midnight"
+    },
+    {
+      "name": "Mana Tide Totem",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "High Tide",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Wellspring",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with shaman.json for full ability list",
+    "Reincarnation is a passive self-rez, not an active defensive cast — tracked for awareness only",
+    "Spirit Wolf DR is passive while in Ghost Wolf form — not a traditional CD",
+    "Wind Shear CD is 12s base but 30s for Resto spec specifically",
+    "Healing Tide Totem and Ascendance are on the same choice node",
+    "Stormstream Totem (1267016) is new in Midnight but primarily a healing throughput totem, not tracked as CD"
+  ]
+}

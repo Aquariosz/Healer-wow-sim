@@ -1,0 +1,45 @@
+{
+  "class": "Warlock",
+  "spec": "Destruction",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "warlock.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 1122,
+        "name": "Summon Infernal",
+        "cooldown": 180,
+        "notes": "Primary DPS CD. AoE damage pet"
+      },
+      {
+        "id": 80240,
+        "name": "Havoc",
+        "cooldown": 30,
+        "notes": "Cleave spells to second target. Destro only"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Channel Demonfire (old)",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with warlock.json for full ability list",
+    "Havoc is unique to Destruction — cleave mechanic, not a traditional CD",
+    "Summon Infernal can be talented for shorter CD"
+  ]
+}

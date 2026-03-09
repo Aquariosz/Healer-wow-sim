@@ -1,0 +1,77 @@
+{
+  "class": "Monk",
+  "spec": "Brewmaster",
+  "role": "TANK",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "monk.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 115176,
+        "name": "Zen Meditation",
+        "cooldown": 300,
+        "notes": "60% DR channel. Breaks on melee. Talented"
+      },
+      {
+        "id": 322507,
+        "name": "Celestial Brew",
+        "cooldown": 30,
+        "notes": "Absorb shield based on Purified Chi. Brew only"
+      },
+      {
+        "id": 119582,
+        "name": "Purifying Brew",
+        "cooldown": 20,
+        "notes": "Clears stagger. 2 charges. Primary mitigation"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 116705,
+        "name": "Spear Hand Strike",
+        "cooldown": 15,
+        "notes": "Melee range"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 218164,
+        "name": "Detox",
+        "cooldown": 8,
+        "notes": "Poison + Disease on friendly target"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 115315,
+        "name": "Summon Black Ox Statue",
+        "cooldown": 10,
+        "notes": "Generates threat in area. Brew only"
+      }
+    ],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Invoke Niuzao, the Black Ox",
+      "reason": "Reworked in Midnight"
+    },
+    {
+      "name": "Weapons of Order",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with monk.json for full ability list",
+    "Stagger is the core Brewmaster mechanic — damage taken is spread over time",
+    "Purifying Brew clears stagger — the primary active mitigation tool",
+    "Black Ox Statue is unique tank utility for snap AoE threat"
+  ]
+}

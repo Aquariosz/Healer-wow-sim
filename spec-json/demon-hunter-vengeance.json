@@ -1,0 +1,89 @@
+{
+  "class": "DemonHunter",
+  "spec": "Vengeance",
+  "role": "TANK",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "demon-hunter.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 187827,
+        "name": "Metamorphosis",
+        "cooldown": 180,
+        "notes": "Tank meta — big armor/health increase"
+      },
+      {
+        "id": 203720,
+        "name": "Demon Spikes",
+        "cooldown": 20,
+        "notes": "Armor increase, 2 charges. Active mitigation"
+      },
+      {
+        "id": 263648,
+        "name": "Soul Barrier",
+        "cooldown": 30,
+        "notes": "Absorb shield. Talented"
+      },
+      {
+        "id": 204021,
+        "name": "Fiery Brand",
+        "cooldown": 60,
+        "notes": "40% DR on target for 8s"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [
+      {
+        "id": 189110,
+        "name": "Infernal Strike",
+        "cooldown": 20,
+        "notes": "Leap to target location"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 204596,
+        "name": "Sigil of Flame",
+        "cooldown": 30,
+        "notes": "AoE damage, delayed trigger"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 202137,
+        "name": "Sigil of Silence",
+        "cooldown": 90,
+        "notes": "1s silence, delayed trigger. Veng only. Talented"
+      },
+      {
+        "id": 202138,
+        "name": "Sigil of Chains",
+        "cooldown": 90,
+        "notes": "AoE grip + 70% slow for 5s. Veng only. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [
+    {
+      "name": "Elysian Decree",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Spirit Bomb",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with demon-hunter.json for full ability list",
+    "Void Metamorphosis is a Devourer hero talent variant — same base spell ID",
+    "Darkness is 5/3min CD depending on talents",
+    "Disrupt giving 15% DR is talented — a unique interrupt+defensive combo"
+  ]
+}

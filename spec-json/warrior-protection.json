@@ -1,0 +1,78 @@
+{
+  "class": "Warrior",
+  "spec": "Protection",
+  "role": "TANK",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "warrior.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 871,
+        "name": "Shield Wall",
+        "cooldown": 210,
+        "notes": "40% DR for 8s"
+      },
+      {
+        "id": 12975,
+        "name": "Last Stand",
+        "cooldown": 180,
+        "notes": "+30% max health for 15s"
+      },
+      {
+        "id": 2565,
+        "name": "Shield Block",
+        "cooldown": 16,
+        "notes": "Block all melee for 6s. 2 charges. Active mitigation"
+      },
+      {
+        "id": 190456,
+        "name": "Ignore Pain",
+        "cooldown": 0,
+        "notes": "Absorb shield. Primary active mitigation"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 384100,
+        "name": "Disrupting Shout",
+        "cooldown": 90,
+        "notes": "AoE interrupt 14 yards + taunt. Prot only"
+      }
+    ],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "id": 384318,
+      "name": "Thunderous Roar",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "id": 391572,
+      "name": "Uproar",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "id": 394307,
+      "name": "Immovable Object",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with warrior.json for full ability list",
+    "Prot has 2 interrupt sources: Pummel (melee) and Disrupting Shout (AoE 14yd)",
+    "Spell Reflection is both defensive (20% magic DR) and utility (spell reflect)",
+    "Mountain Thane hero talent: Stormbolts (40s CD, 2s stun, 3 targets)",
+    "Phalanx (1269311) is new Midnight talent for Prot",
+    "Thunderclap provides 20% frequent slow — passive, not tracked"
+  ]
+}

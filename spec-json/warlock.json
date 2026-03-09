@@ -1,0 +1,145 @@
+{
+  "class": "Warlock",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 104773,
+        "name": "Unending Resolve",
+        "cooldown": 180,
+        "notes": "25-40% DR for 8s. Diabolist: 10% shield or 30% heal"
+      },
+      {
+        "id": 108416,
+        "name": "Dark Pact",
+        "cooldown": 60,
+        "notes": "40% shield for 20% of health. Talented"
+      },
+      {
+        "id": 6789,
+        "name": "Mortal Coil",
+        "cooldown": 45,
+        "notes": "20-25% heal. Also 3s horror CC"
+      },
+      {
+        "id": 6262,
+        "name": "Healthstone",
+        "cooldown": 60,
+        "notes": "3 uses per combat, 20-32.5% heal"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 119910,
+        "name": "Spell Lock",
+        "cooldown": 24,
+        "notes": "40 yard range. Requires Felhunter or talent"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 89808,
+        "name": "Singe Magic",
+        "cooldown": 15,
+        "notes": "Magic on friendly target. Via Grimoire: Imp Lord talented"
+      },
+      {
+        "id": 19505,
+        "name": "Devour Magic",
+        "cooldown": 15,
+        "notes": "Magic from enemy target. Requires Felhunter"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 48020,
+        "name": "Demonic Circle: Teleport",
+        "cooldown": 30,
+        "notes": "Teleport to pre-placed circle"
+      },
+      {
+        "id": 111771,
+        "name": "Demonic Gateway",
+        "cooldown": 90,
+        "notes": "Two-point teleport for raid"
+      },
+      {
+        "id": 5765,
+        "name": "Burning Rush",
+        "cooldown": 0,
+        "notes": "50% speed drain health. Toggle"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 20707,
+        "name": "Soulstone",
+        "cooldown": 600,
+        "notes": "Battle rez (pre-cast or post-death)"
+      },
+      {
+        "id": 29893,
+        "name": "Ritual of Summoning",
+        "cooldown": 120,
+        "notes": "Summon player to location"
+      },
+      {
+        "id": 6201,
+        "name": "Create Healthstone",
+        "cooldown": 0,
+        "notes": "Raid healthstones"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 30283,
+        "name": "Shadowfury",
+        "cooldown": 60,
+        "notes": "3s AoE stun. 45s talented"
+      },
+      {
+        "id": 710,
+        "name": "Banish",
+        "cooldown": 0,
+        "notes": "30s banish. Undead/Demon/Aberration/Elemental. Can't be broken by damage"
+      },
+      {
+        "id": 5782,
+        "name": "Fear",
+        "cooldown": 0,
+        "notes": "20s fear on any target"
+      },
+      {
+        "id": 6358,
+        "name": "Seduction",
+        "cooldown": 30,
+        "notes": "30s disorient. Humanoid only. Requires Succubus"
+      },
+      {
+        "id": 5484,
+        "name": "Howl of Terror",
+        "cooldown": 40,
+        "notes": "20s AoE disorient. Diabolist: 10s CDR. Talented"
+      },
+      {
+        "id": 6789,
+        "name": "Mortal Coil",
+        "cooldown": 45,
+        "notes": "3s ST incap + heal"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Warlock specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

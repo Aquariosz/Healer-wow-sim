@@ -1,0 +1,82 @@
+{
+  "class": "Warrior",
+  "spec": "Arms",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "warrior.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 118038,
+        "name": "Die by the Sword",
+        "cooldown": 120,
+        "notes": "100% parry + 30% DR for 8s. Arms only"
+      },
+      {
+        "id": 197690,
+        "name": "Defensive Stance",
+        "cooldown": 3,
+        "notes": "15% DR toggle, -10% damage. Reduces 20%+ hits by 15%. Arms only"
+      },
+      {
+        "id": 202168,
+        "name": "Impending Victory",
+        "cooldown": 25,
+        "notes": "30% heal. Reset on kills. +10% max health talented"
+      },
+      {
+        "id": 190456,
+        "name": "Ignore Pain",
+        "cooldown": 20,
+        "notes": "Absorb 30% of damage for 12s. Arms talented"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 167105,
+        "name": "Colossus Smash",
+        "cooldown": 45,
+        "notes": "Major debuff. With CDR"
+      },
+      {
+        "id": 260643,
+        "name": "Sweeping Strikes",
+        "cooldown": 30,
+        "notes": "Cleave mechanic"
+      },
+      {
+        "id": 376079,
+        "name": "Champion's Spear",
+        "cooldown": 90,
+        "notes": "Chains target to location for 6s. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "id": 384318,
+      "name": "Thunderous Roar",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Cleave (old)",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with warrior.json for full ability list",
+    "Arms has Mortal Wounds via Mortal Strike — passive debuff, not tracked",
+    "Defensive Stance is a toggle — unique warrior defensive",
+    "Arms has above-average execute capability via Execute phase"
+  ]
+}

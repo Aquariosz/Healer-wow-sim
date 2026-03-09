@@ -1,0 +1,122 @@
+{
+  "class": "Mage",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 414658,
+        "name": "Ice Cold",
+        "cooldown": 240,
+        "notes": "70% DR for 6s. Frostfire: triggers Blazing Barrier"
+      },
+      {
+        "id": 342245,
+        "name": "Alter Time",
+        "cooldown": 60,
+        "notes": "Health revert after 10s. Autocast at 25% health talented"
+      }
+    ],
+    "immunities": [
+      {
+        "id": 45438,
+        "name": "Ice Block",
+        "cooldown": 240,
+        "notes": "Full immune for 10s. 2 charges talented. Cannot/can move (hero talent)"
+      }
+    ],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 2139,
+        "name": "Counterspell",
+        "cooldown": 25,
+        "notes": "40 yard range. 20s talented"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 30449,
+        "name": "Spellsteal",
+        "cooldown": 0,
+        "notes": "Steal Magic buff from enemy. 4s CD but casts twice talented"
+      },
+      {
+        "id": 475,
+        "name": "Remove Curse",
+        "cooldown": 8,
+        "notes": "Curses on friendly target"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 1953,
+        "name": "Blink",
+        "cooldown": 15,
+        "notes": "Short teleport forward. 2 charges as Shimmer talented"
+      },
+      {
+        "id": 212653,
+        "name": "Shimmer",
+        "cooldown": 25,
+        "notes": "Blink usable while casting. Talented. Replaces Blink"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 1459,
+        "name": "Arcane Intellect",
+        "cooldown": 0,
+        "notes": "+3% Intellect raid buff"
+      },
+      {
+        "id": 110959,
+        "name": "Greater Invisibility",
+        "cooldown": 120,
+        "notes": "Invis pot equivalent for group. Talented"
+      },
+      {
+        "id": 130,
+        "name": "Slow Fall",
+        "cooldown": 0,
+        "notes": "Feather fall"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 118,
+        "name": "Polymorph",
+        "cooldown": 0,
+        "notes": "1min incap on Humanoids/Beasts/Critters. Regens health"
+      },
+      {
+        "id": 31661,
+        "name": "Dragon's Breath",
+        "cooldown": 45,
+        "notes": "4s disorient. Fire: can be reset with Cauterize"
+      },
+      {
+        "id": 113724,
+        "name": "Ring of Frost",
+        "cooldown": 45,
+        "notes": "10s AoE incap. Frostfire+Fire: 30% CDR"
+      },
+      {
+        "id": 122,
+        "name": "Frost Nova",
+        "cooldown": 30,
+        "notes": "6-8s root. Fire: can be reset with Cauterize"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Mage specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

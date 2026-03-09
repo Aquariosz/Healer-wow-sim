@@ -1,0 +1,744 @@
+{
+    "data": {
+        "reportData": {
+            "report": {
+                "events": {
+                    "data": [
+                        {
+                            "timestamp": 194730,
+                            "type": "combatantinfo",
+                            "fight": 2,
+                            "sourceID": 5,
+                            "gear": [
+                                {
+                                    "id": 250051,
+                                    "quality": 4,
+                                    "icon": "inv_helm_cloth_raidpriestmidnight_d_01.jpg",
+                                    "itemLevel": 233,
+                                    "permanentEnchant": 7961,
+                                    "bonusIDs": [
+                                        12806,
+                                        13335,
+                                        13338,
+                                        6652,
+                                        12667,
+                                        12676
+                                    ],
+                                    "setID": 1986
+                                },
+                                {
+                                    "id": 240950,
+                                    "quality": 4,
+                                    "icon": "inv_12_profession_jewelcrafting_necklace2_gold.jpg",
+                                    "itemLevel": 233,
+                                    "bonusIDs": [
+                                        12214,
+                                        12497,
+                                        12066,
+                                        12686,
+                                        8960
+                                    ],
+                                    "gems": [
+                                        {
+                                            "id": 240982,
+                                            "itemLevel": 278,
+                                            "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 250049,
+                                    "quality": 4,
+                                    "icon": "inv_shoulder_cloth_raidpriestmidnight_d_01.jpg",
+                                    "itemLevel": 233,
+                                    "permanentEnchant": 8031,
+                                    "bonusIDs": [
+                                        12806,
+                                        13335,
+                                        13340,
+                                        6652,
+                                        12675
+                                    ],
+                                    "setID": 1986
+                                },
+                                {
+                                    "id": 0,
+                                    "quality": 1,
+                                    "icon": "inv_axe_02.jpg",
+                                    "itemLevel": 0
+                                },
+                                {
+                                    "id": 255376,
+                                    "quality": 4,
+                                    "icon": "inv_robe_cloth_raidpriestmidnight_d_01.jpg",
+                                    "itemLevel": 233,
+                                    "permanentEnchant": 7987,
+                                    "bonusIDs": [
+                                        12792,
+                                        13448,
+                                        13577,
+                                        13452
+                                    ]
+                                },
+                                {
+                                    "id": 249635,
+                                    "quality": 4,
+                                    "icon": "inv_belt_cloth_dungeonharronir_c_01.jpg",
+                                    "itemLevel": 233,
+                                    "bonusIDs": [
+                                        12785,
+                                        6652,
+                                        12667,
+                                        13577
+                                    ]
+                                },
+                                {
+                                    "id": 250050,
+                                    "quality": 4,
+                                    "icon": "inv_pant_cloth_raidpriestmidnight_d_01.jpg",
+                                    "itemLevel": 233,
+                                    "permanentEnchant": 7935,
+                                    "bonusIDs": [
+                                        12806,
+                                        13335,
+                                        13339,
+                                        6652,
+                                        12676
+                                    ],
+                                    "setID": 1986
+                                },
+                                {
+                                    "id": 255378,
+                                    "quality": 4,
+                                    "icon": "inv_boot_cloth_raidpriestmidnight_d_01.jpg",
+                                    "itemLevel": 233,
+                                    "permanentEnchant": 7993,
+                                    "bonusIDs": [
+                                        12792,
+                                        13448,
+                                        13577,
+                                        13452
+                                    ]
+                                },
+                                {
+                                    "id": 255391,
+                                    "quality": 4,
+                                    "icon": "inv_bracer_cloth_raidpriestmidnight_d_01.jpg",
+                                    "itemLevel": 233,
+                                    "bonusIDs": [
+                                        12792,
+                                        13448,
+                                        13577,
+                                        13554,
+                                        13452
+                                    ]
+                                },
+                                {
+                                    "id": 250052,
+                                    "quality": 4,
+                                    "icon": "inv_glove_cloth_raidpriestmidnight_d_01.jpg",
+                                    "itemLevel": 233,
+                                    "bonusIDs": [
+                                        12806,
+                                        13335,
+                                        13337,
+                                        6652,
+                                        12675
+                                    ],
+                                    "setID": 1986
+                                },
+                                {
+                                    "id": 249920,
+                                    "quality": 4,
+                                    "icon": "inv_12_jewelry_devouringhost_ring_bronze.jpg",
+                                    "itemLevel": 233,
+                                    "permanentEnchant": 7997,
+                                    "bonusIDs": [
+                                        6652,
+                                        13534,
+                                        13335,
+                                        12806
+                                    ],
+                                    "gems": [
+                                        {
+                                            "id": 240894,
+                                            "itemLevel": 295,
+                                            "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_frost_green.jpg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 240949,
+                                    "quality": 4,
+                                    "icon": "inv_12_profession_jewelcrafting_ring4_gold.jpg",
+                                    "itemLevel": 233,
+                                    "permanentEnchant": 7997,
+                                    "bonusIDs": [
+                                        12214,
+                                        12497,
+                                        12066,
+                                        12686,
+                                        8960
+                                    ],
+                                    "gems": [
+                                        {
+                                            "id": 240909,
+                                            "itemLevel": 278,
+                                            "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_frost_red.jpg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 249341,
+                                    "quality": 4,
+                                    "icon": "inv_12_trinket_raid_voidspire_healer1_volatilevoidsuffuser.jpg",
+                                    "itemLevel": 233,
+                                    "bonusIDs": [
+                                        6652,
+                                        13335,
+                                        12806
+                                    ]
+                                },
+                                {
+                                    "id": 249343,
+                                    "quality": 4,
+                                    "icon": "inv_12_trinket_raid_dreamrift_gazeofthealnseer.jpg",
+                                    "itemLevel": 233,
+                                    "bonusIDs": [
+                                        6652,
+                                        13335,
+                                        12806
+                                    ]
+                                },
+                                {
+                                    "id": 255394,
+                                    "quality": 4,
+                                    "icon": "inv_cape_cloth_raidpriestmidnight_d_01.jpg",
+                                    "itemLevel": 233,
+                                    "bonusIDs": [
+                                        12792,
+                                        13448,
+                                        13577,
+                                        13452
+                                    ]
+                                },
+                                {
+                                    "id": 255622,
+                                    "quality": 4,
+                                    "icon": "inv_staff_2h_raidmidnight_d_02.jpg",
+                                    "itemLevel": 233,
+                                    "permanentEnchant": 8039,
+                                    "temporaryEnchant": 8052,
+                                    "bonusIDs": [
+                                        12792,
+                                        13448,
+                                        13452
+                                    ]
+                                },
+                                {
+                                    "id": 0,
+                                    "quality": 1,
+                                    "icon": "inv_axe_02.jpg",
+                                    "itemLevel": 0
+                                },
+                                {
+                                    "id": 0,
+                                    "quality": 1,
+                                    "icon": "inv_axe_02.jpg",
+                                    "itemLevel": 0
+                                }
+                            ],
+                            "auras": [
+                                {
+                                    "source": 5,
+                                    "ability": 1235111,
+                                    "stacks": 1,
+                                    "icon": "inv_12_profession_alchemy_flask_sindoreipotion_red--.jpg",
+                                    "name": "Flask of the Shattered Sun"
+                                },
+                                {
+                                    "source": 5,
+                                    "ability": 373456,
+                                    "stacks": 1,
+                                    "icon": "ability_warrior_unrelentingassault.jpg",
+                                    "name": "Unwavering Will"
+                                },
+                                {
+                                    "source": 2,
+                                    "ability": 1126,
+                                    "stacks": 1,
+                                    "icon": "spell_nature_regeneration.jpg",
+                                    "name": "Mark of the Wild"
+                                },
+                                {
+                                    "source": 5,
+                                    "ability": 21562,
+                                    "stacks": 1,
+                                    "icon": "spell_holy_wordfortitude.jpg",
+                                    "name": "Power Word: Fortitude"
+                                },
+                                {
+                                    "source": 5,
+                                    "ability": 1232585,
+                                    "stacks": 1,
+                                    "icon": "spell_misc_food.jpg",
+                                    "name": "Well Fed"
+                                },
+                                {
+                                    "source": 4,
+                                    "ability": 1459,
+                                    "stacks": 1,
+                                    "icon": "spell_holy_magicalsentry.jpg",
+                                    "name": "Arcane Intellect"
+                                }
+                            ],
+                            "expansion": "dragonflight",
+                            "faction": 1,
+                            "specID": 257,
+                            "strength": 358,
+                            "agility": 517,
+                            "stamina": 15513,
+                            "intellect": 1825,
+                            "dodge": 0,
+                            "parry": 0,
+                            "block": 0,
+                            "armor": 392,
+                            "critMelee": 485,
+                            "critRanged": 485,
+                            "critSpell": 485,
+                            "hasteMelee": 671,
+                            "hasteRanged": 671,
+                            "hasteSpell": 671,
+                            "speed": 0,
+                            "leech": 249,
+                            "avoidance": 0,
+                            "mastery": 176,
+                            "versatilityDamageDone": 556,
+                            "versatilityHealingDone": 556,
+                            "versatilityDamageReduction": 556,
+                            "talentTree": [
+                                {
+                                    "id": 103851,
+                                    "rank": 1,
+                                    "nodeID": 82701
+                                },
+                                {
+                                    "id": 128612,
+                                    "rank": 1,
+                                    "nodeID": 104097
+                                },
+                                {
+                                    "id": 134284,
+                                    "rank": 1,
+                                    "nodeID": 108731
+                                },
+                                {
+                                    "id": 103739,
+                                    "rank": 1,
+                                    "nodeID": 82607
+                                },
+                                {
+                                    "id": 103755,
+                                    "rank": 1,
+                                    "nodeID": 82621
+                                },
+                                {
+                                    "id": 128315,
+                                    "rank": 1,
+                                    "nodeID": 82636
+                                },
+                                {
+                                    "id": 103834,
+                                    "rank": 1,
+                                    "nodeID": 82556
+                                },
+                                {
+                                    "id": 103743,
+                                    "rank": 1,
+                                    "nodeID": 82610
+                                },
+                                {
+                                    "id": 103745,
+                                    "rank": 1,
+                                    "nodeID": 82612
+                                },
+                                {
+                                    "id": 103748,
+                                    "rank": 1,
+                                    "nodeID": 82614
+                                },
+                                {
+                                    "id": 103754,
+                                    "rank": 1,
+                                    "nodeID": 82620
+                                },
+                                {
+                                    "id": 103756,
+                                    "rank": 1,
+                                    "nodeID": 82622
+                                },
+                                {
+                                    "id": 103762,
+                                    "rank": 1,
+                                    "nodeID": 82627
+                                },
+                                {
+                                    "id": 103765,
+                                    "rank": 1,
+                                    "nodeID": 82630
+                                },
+                                {
+                                    "id": 103766,
+                                    "rank": 1,
+                                    "nodeID": 82631
+                                },
+                                {
+                                    "id": 103774,
+                                    "rank": 1,
+                                    "nodeID": 82637
+                                },
+                                {
+                                    "id": 103775,
+                                    "rank": 1,
+                                    "nodeID": 82638
+                                },
+                                {
+                                    "id": 103776,
+                                    "rank": 1,
+                                    "nodeID": 82639
+                                },
+                                {
+                                    "id": 103777,
+                                    "rank": 1,
+                                    "nodeID": 82640
+                                },
+                                {
+                                    "id": 103779,
+                                    "rank": 1,
+                                    "nodeID": 82641
+                                },
+                                {
+                                    "id": 103818,
+                                    "rank": 1,
+                                    "nodeID": 82672
+                                },
+                                {
+                                    "id": 103825,
+                                    "rank": 1,
+                                    "nodeID": 82678
+                                },
+                                {
+                                    "id": 103833,
+                                    "rank": 2,
+                                    "nodeID": 82684
+                                },
+                                {
+                                    "id": 103837,
+                                    "rank": 1,
+                                    "nodeID": 82687
+                                },
+                                {
+                                    "id": 103840,
+                                    "rank": 1,
+                                    "nodeID": 82690
+                                },
+                                {
+                                    "id": 103853,
+                                    "rank": 1,
+                                    "nodeID": 82703
+                                },
+                                {
+                                    "id": 103867,
+                                    "rank": 1,
+                                    "nodeID": 82715
+                                },
+                                {
+                                    "id": 103868,
+                                    "rank": 1,
+                                    "nodeID": 82716
+                                },
+                                {
+                                    "id": 128331,
+                                    "rank": 2,
+                                    "nodeID": 103914
+                                },
+                                {
+                                    "id": 134283,
+                                    "rank": 1,
+                                    "nodeID": 108730
+                                },
+                                {
+                                    "id": 103841,
+                                    "rank": 1,
+                                    "nodeID": 109006
+                                },
+                                {
+                                    "id": 134846,
+                                    "rank": 1,
+                                    "nodeID": 109012
+                                },
+                                {
+                                    "id": 134859,
+                                    "rank": 1,
+                                    "nodeID": 109020
+                                },
+                                {
+                                    "id": 134860,
+                                    "rank": 1,
+                                    "nodeID": 109021
+                                },
+                                {
+                                    "id": 136157,
+                                    "rank": 1,
+                                    "nodeID": 109890
+                                },
+                                {
+                                    "id": 103677,
+                                    "rank": 1,
+                                    "nodeID": 109009
+                                },
+                                {
+                                    "id": 117281,
+                                    "rank": 1,
+                                    "nodeID": 94678
+                                },
+                                {
+                                    "id": 117279,
+                                    "rank": 1,
+                                    "nodeID": 94676
+                                },
+                                {
+                                    "id": 117280,
+                                    "rank": 1,
+                                    "nodeID": 94677
+                                },
+                                {
+                                    "id": 117283,
+                                    "rank": 1,
+                                    "nodeID": 94680
+                                },
+                                {
+                                    "id": 117284,
+                                    "rank": 1,
+                                    "nodeID": 94681
+                                },
+                                {
+                                    "id": 117288,
+                                    "rank": 1,
+                                    "nodeID": 94685
+                                },
+                                {
+                                    "id": 125083,
+                                    "rank": 1,
+                                    "nodeID": 94686
+                                },
+                                {
+                                    "id": 117291,
+                                    "rank": 1,
+                                    "nodeID": 94688
+                                },
+                                {
+                                    "id": 117302,
+                                    "rank": 1,
+                                    "nodeID": 94699
+                                },
+                                {
+                                    "id": 117305,
+                                    "rank": 1,
+                                    "nodeID": 94702
+                                },
+                                {
+                                    "id": 136034,
+                                    "rank": 1,
+                                    "nodeID": 109776
+                                },
+                                {
+                                    "id": 136035,
+                                    "rank": 1,
+                                    "nodeID": 109777
+                                },
+                                {
+                                    "id": 134849,
+                                    "rank": 1,
+                                    "nodeID": 109015
+                                },
+                                {
+                                    "id": 103733,
+                                    "rank": 1,
+                                    "nodeID": 103900
+                                },
+                                {
+                                    "id": 128613,
+                                    "rank": 1,
+                                    "nodeID": 82604
+                                },
+                                {
+                                    "id": 103823,
+                                    "rank": 1,
+                                    "nodeID": 82677
+                                },
+                                {
+                                    "id": 103835,
+                                    "rank": 1,
+                                    "nodeID": 82685
+                                },
+                                {
+                                    "id": 103836,
+                                    "rank": 2,
+                                    "nodeID": 82686
+                                },
+                                {
+                                    "id": 103847,
+                                    "rank": 2,
+                                    "nodeID": 82697
+                                },
+                                {
+                                    "id": 103855,
+                                    "rank": 1,
+                                    "nodeID": 82705
+                                },
+                                {
+                                    "id": 134844,
+                                    "rank": 2,
+                                    "nodeID": 109010
+                                },
+                                {
+                                    "id": 103780,
+                                    "rank": 1,
+                                    "nodeID": 82642
+                                },
+                                {
+                                    "id": 103763,
+                                    "rank": 1,
+                                    "nodeID": 82628
+                                },
+                                {
+                                    "id": 103757,
+                                    "rank": 1,
+                                    "nodeID": 82623
+                                },
+                                {
+                                    "id": 136688,
+                                    "rank": 1,
+                                    "nodeID": 109775
+                                },
+                                {
+                                    "id": 103831,
+                                    "rank": 1,
+                                    "nodeID": 82682
+                                },
+                                {
+                                    "id": 103846,
+                                    "rank": 1,
+                                    "nodeID": 82696
+                                },
+                                {
+                                    "id": 103852,
+                                    "rank": 1,
+                                    "nodeID": 82702
+                                },
+                                {
+                                    "id": 103734,
+                                    "rank": 1,
+                                    "nodeID": 82603
+                                },
+                                {
+                                    "id": 103767,
+                                    "rank": 1,
+                                    "nodeID": 82632
+                                },
+                                {
+                                    "id": 103769,
+                                    "rank": 1,
+                                    "nodeID": 82633
+                                },
+                                {
+                                    "id": 103675,
+                                    "rank": 1,
+                                    "nodeID": 82554
+                                },
+                                {
+                                    "id": 136995,
+                                    "rank": 1,
+                                    "nodeID": 110409
+                                },
+                                {
+                                    "id": 136994,
+                                    "rank": 2,
+                                    "nodeID": 110409
+                                },
+                                {
+                                    "id": 136993,
+                                    "rank": 1,
+                                    "nodeID": 110409
+                                },
+                                {
+                                    "id": 115884,
+                                    "rank": 1,
+                                    "nodeID": 82676
+                                },
+                                {
+                                    "id": 103747,
+                                    "rank": 1,
+                                    "nodeID": 82613
+                                },
+                                {
+                                    "id": 103752,
+                                    "rank": 1,
+                                    "nodeID": 82618
+                                },
+                                {
+                                    "id": 103821,
+                                    "rank": 1,
+                                    "nodeID": 82675
+                                },
+                                {
+                                    "id": 123291,
+                                    "rank": 1,
+                                    "nodeID": 99802
+                                },
+                                {
+                                    "id": 103869,
+                                    "rank": 1,
+                                    "nodeID": 82717
+                                },
+                                {
+                                    "id": 103870,
+                                    "rank": 1,
+                                    "nodeID": 82718
+                                },
+                                {
+                                    "id": 134273,
+                                    "rank": 1,
+                                    "nodeID": 108724
+                                }
+                            ],
+                            "talents": [],
+                            "pvpTalents": [
+                                {
+                                    "id": 0,
+                                    "icon": "inv_axe_02.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "icon": "inv_axe_02.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "icon": "inv_axe_02.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "icon": "inv_axe_02.jpg"
+                                }
+                            ],
+                            "customPowerSet": [],
+                            "secondaryCustomPowerSet": [],
+                            "tertiaryCustomPowerSet": []
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

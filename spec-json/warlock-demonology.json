@@ -1,0 +1,61 @@
+{
+  "class": "Warlock",
+  "spec": "Demonology",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "warlock.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 89766,
+        "name": "Axe Toss",
+        "cooldown": 30,
+        "notes": "Pet melee range. Also stuns for 4s. Demo Felguard"
+      }
+    ],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 265187,
+        "name": "Summon Demonic Tyrant",
+        "cooldown": 90,
+        "notes": "Primary DPS CD. Extends demon duration. Talented"
+      },
+      {
+        "id": 267217,
+        "name": "Nether Portal",
+        "cooldown": 180,
+        "notes": "Summon additional demons. Talented"
+      },
+      {
+        "id": 111898,
+        "name": "Grimoire: Felguard",
+        "cooldown": 120,
+        "notes": "Summon extra Felguard. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": [
+      {
+        "id": 89766,
+        "name": "Axe Toss",
+        "cooldown": 30,
+        "notes": "4s pet stun. Demo only"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Merge with warlock.json for full ability list",
+    "Axe Toss is both an interrupt and a stun — Felguard pet ability. Demo only",
+    "Demo has unique access to Axe Toss stun without talent investment",
+    "Grimoire: Imp Lord can provide Singe Magic without having an active Imp"
+  ]
+}

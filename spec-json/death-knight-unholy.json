@@ -1,0 +1,55 @@
+{
+  "class": "DeathKnight",
+  "spec": "Unholy",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "death-knight.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 63560,
+        "name": "Dark Transformation",
+        "cooldown": 60,
+        "notes": "Empowers ghoul for 15s"
+      },
+      {
+        "id": 42650,
+        "name": "Army of the Dead",
+        "cooldown": 180,
+        "notes": "Summon army of ghouls"
+      },
+      {
+        "id": 275699,
+        "name": "Apocalypse",
+        "cooldown": 75,
+        "notes": "Burst ghouls from Festering Wounds"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Soul Reaper",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Unholy Assault",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with death-knight.json for full ability list",
+    "Shambling Rush from Unholy DK pet: 90s CD, 30 yard immobilize — pet ability, not tracked directly",
+    "Putrefy noted in CSV as above-average execute capability"
+  ]
+}

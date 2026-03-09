@@ -1,0 +1,121 @@
+{
+  "class": "DeathKnight",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 48792,
+        "name": "Icebound Fortitude",
+        "cooldown": 120,
+        "notes": "30% DR for 8s, stun immunity. San'layn: DR scales with missing HP"
+      },
+      {
+        "id": 48707,
+        "name": "Anti-Magic Shell",
+        "cooldown": 60,
+        "notes": "Magic absorb for 5-7s. +15% healing taken talented. Smaller version on 2 allies talented"
+      },
+      {
+        "id": 49998,
+        "name": "Death Strike",
+        "cooldown": 0,
+        "notes": "Heals 20% of dmg taken in last 5s or 7% max HP"
+      },
+      {
+        "id": 49039,
+        "name": "Lichborne",
+        "cooldown": 120,
+        "notes": "6% leech for 10-12s, fear/charm/sleep immune. San'layn: given to 4 allies talented"
+      },
+      {
+        "id": 48743,
+        "name": "Death Pact",
+        "cooldown": 120,
+        "notes": "50% heal, 30% healing absorb. Talented"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 51052,
+        "name": "Anti-Magic Zone",
+        "cooldown": 240,
+        "notes": "15% magic DR for raid over 6-8s"
+      }
+    ],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 47528,
+        "name": "Mind Freeze",
+        "cooldown": 15,
+        "notes": "Melee range, 12s talented"
+      }
+    ],
+    "dispels": [],
+    "movementCooldowns": [
+      {
+        "id": 48265,
+        "name": "Death's Advance",
+        "cooldown": 45,
+        "notes": "+35% movement speed for 8s, cannot be slowed below 100%"
+      },
+      {
+        "id": 212552,
+        "name": "Wraith Walk",
+        "cooldown": 60,
+        "notes": "70% movement speed for 4s, immune to roots/snares. Talented"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 49576,
+        "name": "Death Grip",
+        "cooldown": 15,
+        "notes": "Pulls target to DK, resets on kill talented, 2 charges talented"
+      },
+      {
+        "id": 61999,
+        "name": "Raise Ally",
+        "cooldown": 600,
+        "notes": "Battle rez"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 207167,
+        "name": "Blinding Sleet",
+        "cooldown": 60,
+        "notes": "5s disorient cone + 50% slow for 6s. Talented"
+      },
+      {
+        "id": 111673,
+        "name": "Control Undead",
+        "cooldown": 0,
+        "notes": "Dominate undead target"
+      },
+      {
+        "id": 45524,
+        "name": "Chains of Ice",
+        "cooldown": 0,
+        "notes": "70% ST slow for 8s"
+      },
+      {
+        "id": 108194,
+        "name": "Asphyxiate",
+        "cooldown": 45,
+        "notes": "5s ST stun. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Death Knight specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

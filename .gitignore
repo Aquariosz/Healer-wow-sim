@@ -1,0 +1,9 @@
+# Agent Architecture Ignores
+.env
+.tmp/
+credentials.json
+token.json
+__pycache__/
+*.pyc
+.venv/
+venv/

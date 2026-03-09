@@ -1,0 +1,83 @@
+{
+  "class": "Shaman",
+  "spec": "Enhancement",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "shaman.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 192077,
+        "name": "Wind Rush Totem",
+        "cooldown": 120,
+        "notes": "40-50% raid speed for 5-7s. Talented"
+      }
+    ],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 51886,
+        "name": "Cleanse Spirit",
+        "cooldown": 8,
+        "notes": "Curse on friendly target"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 114051,
+        "name": "Ascendance",
+        "cooldown": 180,
+        "notes": "Primary DPS CD. Talented"
+      },
+      {
+        "id": 384352,
+        "name": "Doom Winds",
+        "cooldown": 60,
+        "notes": "Empowers melee attacks. Talented"
+      },
+      {
+        "id": 197214,
+        "name": "Sundering",
+        "cooldown": 40,
+        "notes": "AoE damage + incap. Enhancement only"
+      }
+    ],
+    "utility": [
+      {
+        "id": 2825,
+        "name": "Bloodlust",
+        "cooldown": 300,
+        "notes": "Raid haste CD (Heroism)"
+      },
+      {
+        "id": 462854,
+        "name": "Skyfury",
+        "cooldown": 0,
+        "notes": "2% mastery + 20% auto-attack proc. Raid buff"
+      }
+    ],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Feral Spirit (old)",
+      "reason": "Reworked in Midnight"
+    },
+    {
+      "name": "Ice Strike",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with shaman.json for full ability list",
+    "Sundering also provides an incap component — listed under offensives since primary use is damage",
+    "Surging Totem is a Totemic hero talent option for Enhancement",
+    "Enhancement does NOT have Thunderstorm — that's Elemental only"
+  ]
+}

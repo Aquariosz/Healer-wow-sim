@@ -1,0 +1,60 @@
+{
+  "class": "Hunter",
+  "spec": "Survival",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "hunter.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 187707,
+        "name": "Muzzle",
+        "cooldown": 15,
+        "notes": "Melee range"
+      }
+    ],
+    "dispels": [],
+    "movementCooldowns": [
+      {
+        "id": 190925,
+        "name": "Harpoon",
+        "cooldown": 20,
+        "notes": "Charge to target. Survival only"
+      }
+    ],
+    "offensiveCooldowns": [
+      {
+        "id": 360952,
+        "name": "Coordinated Assault",
+        "cooldown": 120,
+        "notes": "Primary DPS CD"
+      },
+      {
+        "id": 259391,
+        "name": "Fury of the Eagle",
+        "cooldown": 45,
+        "notes": "AoE channel. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Mongoose Bite",
+      "reason": "Reworked/removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with hunter.json for full ability list",
+    "Survival uses Muzzle (melee) instead of Counter Shot (ranged) for interrupt",
+    "Harpoon is a melee-range charge — unique to Survival",
+    "Takedown and Boomstick/Flamefang Pitch noted in CSV as offensive options"
+  ]
+}

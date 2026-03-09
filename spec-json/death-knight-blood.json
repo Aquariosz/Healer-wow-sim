@@ -1,0 +1,72 @@
+{
+  "class": "DeathKnight",
+  "spec": "Blood",
+  "role": "TANK",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "death-knight.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 55233,
+        "name": "Vampiric Blood",
+        "cooldown": 90,
+        "notes": "+30% max health and +30% healing/absorbs for 10s"
+      },
+      {
+        "id": 49028,
+        "name": "Dancing Rune Weapon",
+        "cooldown": 120,
+        "notes": "+20% parry for 8s, also offensive"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 108199,
+        "name": "Gorefiend's Grasp",
+        "cooldown": 90,
+        "notes": "AoE grip + 3s silence. Blood only"
+      },
+      {
+        "id": 3714,
+        "name": "Path of Frost",
+        "cooldown": 0,
+        "notes": "Water walking"
+      }
+    ],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Bonestorm",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Tombstone",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Rune Tap",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Blood Tap",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with death-knight.json for full ability list",
+    "Death Strike is listed as defensive since it's the primary active mitigation",
+    "DRW is both offensive and defensive — listed under defensives for tank tracking",
+    "Purgatory (114556) is a passive cheat death — not tracked as an active defensive",
+    "Abomination Limb was a choice node with Gorefiend's Grasp — tracking Gorefiend's as primary Blood pick"
+  ]
+}

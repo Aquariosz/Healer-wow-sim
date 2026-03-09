@@ -1,0 +1,118 @@
+{
+  "class": "Monk",
+  "spec": "Windwalker",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "monk.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 122470,
+        "name": "Touch of Karma",
+        "cooldown": 90,
+        "notes": "50% health absorb, redirects damage taken. WW only"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 116705,
+        "name": "Spear Hand Strike",
+        "cooldown": 15,
+        "notes": "Melee range"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 218164,
+        "name": "Detox",
+        "cooldown": 8,
+        "notes": "Poison + Disease on friendly target"
+      },
+      {
+        "id": 115078,
+        "name": "Paralysis",
+        "cooldown": 45,
+        "notes": "With Pressure Points talent: removes Enrage on enemy"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 115008,
+        "name": "Chi Torpedo",
+        "cooldown": 20,
+        "notes": "2 charges. Replaces Roll. Talented"
+      },
+      {
+        "id": 101545,
+        "name": "Flying Serpent Kick",
+        "cooldown": 25,
+        "notes": "Long-range dash. WW only"
+      }
+    ],
+    "offensiveCooldowns": [
+      {
+        "id": 137639,
+        "name": "Storm, Earth, and Fire",
+        "cooldown": 90,
+        "notes": "Clone mechanic. Primary AoE CD"
+      },
+      {
+        "id": 152175,
+        "name": "Whirling Dragon Punch",
+        "cooldown": 24,
+        "notes": "AoE burst. Talented"
+      },
+      {
+        "id": 322109,
+        "name": "Touch of Death",
+        "cooldown": 180,
+        "notes": "Execute/big hit"
+      },
+      {
+        "id": 123904,
+        "name": "Invoke Xuen, the White Tiger",
+        "cooldown": 120,
+        "notes": "Summon Xuen. Conduit of the Celestials hero talent"
+      }
+    ],
+    "utility": [
+      {
+        "id": 119381,
+        "name": "Leg Sweep",
+        "cooldown": 60,
+        "notes": "Also utility — see CC"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 116095,
+        "name": "Disable",
+        "cooldown": 0,
+        "notes": "50% ST slow for 15s, refreshed by melee"
+      }
+    ]
+  },
+  "removedAbilities": [
+    {
+      "name": "Serenity",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Weapons of Order",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with monk.json for full ability list",
+    "Touch of Karma is WW-specific — absorbs damage and reflects it back",
+    "Conduit of the Celestials: Fortifying Brew grants absorb",
+    "Master of Harmony: Staggers 20% of damage taken",
+    "Crashing Momentum: 40-60% slow applied with Roll for 5-7s. Talented passive",
+    "Windwalking aura: +4% movement speed to nearby allies. Passive"
+  ]
+}

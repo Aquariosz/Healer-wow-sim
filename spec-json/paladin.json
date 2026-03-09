@@ -1,0 +1,96 @@
+{
+  "class": "Paladin",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [
+      {
+        "id": 642,
+        "name": "Divine Shield",
+        "cooldown": 300,
+        "notes": "Full immune for 8s. Clears debuffs. Taunts all enemies talented"
+      }
+    ],
+    "raidCooldowns": [],
+    "externals": [
+      {
+        "id": 6940,
+        "name": "Blessing of Sacrifice",
+        "cooldown": 120,
+        "notes": "30-45% DR for 12s. Auto-cast if target drops below 35% talented"
+      },
+      {
+        "id": 1022,
+        "name": "Blessing of Protection",
+        "cooldown": 300,
+        "notes": "Physical immune for 8s + 15% DR. Talented CDR"
+      },
+      {
+        "id": 633,
+        "name": "Lay on Hands",
+        "cooldown": 600,
+        "notes": "Full heal. Ret: up to 60% CDR based on missing health"
+      },
+      {
+        "id": 1044,
+        "name": "Blessing of Freedom",
+        "cooldown": 25,
+        "notes": "8s root/slow immune + 30-45% speed. Self-casts talented"
+      }
+    ],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [
+      {
+        "id": 190784,
+        "name": "Divine Steed",
+        "cooldown": 45,
+        "notes": "100% speed for 3s. 2 charges talented"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 465,
+        "name": "Devotion Aura",
+        "cooldown": 0,
+        "notes": "3% DR to all. Passive aura"
+      },
+      {
+        "id": 391054,
+        "name": "Intercession",
+        "cooldown": 600,
+        "notes": "Battle rez"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 853,
+        "name": "Hammer of Justice",
+        "cooldown": 45,
+        "notes": "6s ST stun. 30s talented"
+      },
+      {
+        "id": 10326,
+        "name": "Turn Evil",
+        "cooldown": 15,
+        "notes": "40s fear on Undead/Aberrations/Demons. 5 targets talented"
+      },
+      {
+        "id": 115750,
+        "name": "Blinding Light",
+        "cooldown": 90,
+        "notes": "6s AoE blind. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Paladin specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

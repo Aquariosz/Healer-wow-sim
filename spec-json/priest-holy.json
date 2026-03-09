@@ -1,0 +1,77 @@
+{
+  "class": "Priest",
+  "spec": "Holy",
+  "role": "HEALER",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "priest.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 64843,
+        "name": "Divine Hymn",
+        "cooldown": 180,
+        "notes": "Channel AoE healing. 2min talented"
+      },
+      {
+        "id": 200183,
+        "name": "Apotheosis",
+        "cooldown": 120,
+        "notes": "Enhanced holy form. Talented"
+      }
+    ],
+    "externals": [
+      {
+        "id": 47788,
+        "name": "Guardian Spirit",
+        "cooldown": 180,
+        "notes": "+60% healing taken + cheat death. CD resets to 1min if cheat death doesn't proc"
+      },
+      {
+        "id": 73325,
+        "name": "Leap of Faith",
+        "cooldown": 90,
+        "notes": "Lifegrip ally to you"
+      }
+    ],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 527,
+        "name": "Purify",
+        "cooldown": 8,
+        "notes": "Magic + Disease on friendly target"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 121536,
+        "name": "Angelic Feather",
+        "cooldown": 20,
+        "notes": "40% speed boost pickup"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Circle of Healing (old)",
+      "reason": "Reworked in Midnight"
+    },
+    {
+      "name": "Cosmic Ripple",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with priest.json for full ability list",
+    "Holy Priest has no interrupt — Silence is Shadow only",
+    "Guardian Spirit is the signature Holy external — cheat death on ally",
+    "Archon hero talent: Halo (1min CD) as additional raid healing"
+  ]
+}

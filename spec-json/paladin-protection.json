@@ -1,0 +1,103 @@
+{
+  "class": "Paladin",
+  "spec": "Protection",
+  "role": "TANK",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "paladin.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 31850,
+        "name": "Ardent Defender",
+        "cooldown": 120,
+        "notes": "20% DR for 8s. Cheat death component"
+      },
+      {
+        "id": 86659,
+        "name": "Guardian of Ancient Kings",
+        "cooldown": 300,
+        "notes": "50% DR for 8s. Prot only"
+      },
+      {
+        "id": 53600,
+        "name": "Shield of the Righteous",
+        "cooldown": 0,
+        "notes": "Active mitigation. Armor increase"
+      },
+      {
+        "id": 190456,
+        "name": "Word of Glory",
+        "cooldown": 0,
+        "notes": "Self/ally heal using Holy Power"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [
+      {
+        "id": 204018,
+        "name": "Blessing of Spellwarding",
+        "cooldown": 300,
+        "notes": "Magic immune for 10s. Prot only. Talented"
+      }
+    ],
+    "interrupts": [
+      {
+        "id": 96231,
+        "name": "Rebuke",
+        "cooldown": 15,
+        "notes": "Melee range. Lightsmith: significant CDR"
+      },
+      {
+        "id": 31935,
+        "name": "Avenger's Shield",
+        "cooldown": 15,
+        "notes": "30 yard range. Can be reset by procs. Prot only"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 213644,
+        "name": "Cleanse Toxins",
+        "cooldown": 8,
+        "notes": "Poison + Disease on friendly target. Non-Holy"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 317920,
+        "name": "Concentration Aura",
+        "cooldown": 0,
+        "notes": "Silence 33% shorter. Passive aura"
+      }
+    ],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "id": 382948,
+      "name": "Piercing Challenge",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "id": 386284,
+      "name": "Champion's Might",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Immovable Object",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with paladin.json for full ability list",
+    "BoP and Spellwarding are on a choice node — only one active",
+    "Prot has 2 interrupt sources: Rebuke (melee) and Avenger's Shield (ranged)",
+    "Divine Toll (375576) is a 60-45s CD that casts Avenger's Shield on 5 targets — interrupt potential",
+    "Lightsmith hero talent provides significant CDR to many abilities"
+  ]
+}

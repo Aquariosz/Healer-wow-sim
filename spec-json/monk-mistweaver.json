@@ -1,0 +1,84 @@
+{
+  "class": "Monk",
+  "spec": "Mistweaver",
+  "role": "HEALER",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "monk.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 115310,
+        "name": "Revival",
+        "cooldown": 180,
+        "notes": "Instant raid heal + dispel. Choice node with Restoral"
+      },
+      {
+        "id": 388615,
+        "name": "Restoral",
+        "cooldown": 180,
+        "notes": "Instant raid heal + dispel. Choice node with Revival"
+      },
+      {
+        "id": 325197,
+        "name": "Invoke Chi-Ji, the Red Crane",
+        "cooldown": 120,
+        "notes": "Healing via damage. Talented"
+      },
+      {
+        "id": 322118,
+        "name": "Invoke Yu'lon, the Jade Serpent",
+        "cooldown": 120,
+        "notes": "Healing serpent. Talented"
+      }
+    ],
+    "externals": [
+      {
+        "id": 116849,
+        "name": "Life Cocoon",
+        "cooldown": 120,
+        "notes": "Big absorb + healing taken increase. 75s talented"
+      }
+    ],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 115450,
+        "name": "Detox",
+        "cooldown": 8,
+        "notes": "Poison + Disease + Magic on friendly target. MW adds Magic"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 443028,
+        "name": "Celestial Conduit",
+        "cooldown": 90,
+        "notes": "Conduit of the Celestials hero talent. 90s CD"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Mana Tea",
+      "reason": "Reworked in Midnight"
+    },
+    {
+      "name": "Thunder Focus Tea",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with monk.json for full ability list",
+    "MW has no interrupt — Spear Hand Strike is Brew/WW only",
+    "Revival and Restoral are on a choice node — same function, slightly different mechanics",
+    "Yu'lon and Chi-Ji are on a choice node",
+    "Life Cocoon is the signature MW external"
+  ]
+}

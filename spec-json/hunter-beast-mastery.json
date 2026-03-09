@@ -1,0 +1,60 @@
+{
+  "class": "Hunter",
+  "spec": "Beast Mastery",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "hunter.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 147362,
+        "name": "Counter Shot",
+        "cooldown": 24,
+        "notes": "40 yard range"
+      }
+    ],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 19574,
+        "name": "Bestial Wrath",
+        "cooldown": 90,
+        "notes": "Primary DPS CD. Pet + hunter damage increase"
+      },
+      {
+        "id": 321530,
+        "name": "Bloodshed",
+        "cooldown": 60,
+        "notes": "Pet ST damage. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": [
+      {
+        "id": 109248,
+        "name": "Binding Shot",
+        "cooldown": 45,
+        "notes": "3-4s stun on movement. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [
+    {
+      "name": "Dire Beast",
+      "reason": "Baseline / reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with hunter.json for full ability list",
+    "BM is noted as defensively weaker than MM in the CSV",
+    "Dark Ranger Wailing Arrow: 30s CD for BM (vs 2min for MM)",
+    "BM has full mobility — all abilities castable while moving"
+  ]
+}

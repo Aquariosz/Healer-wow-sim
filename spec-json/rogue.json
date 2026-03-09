@@ -1,0 +1,128 @@
+{
+  "class": "Rogue",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 5277,
+        "name": "Evasion",
+        "cooldown": 120,
+        "notes": "100% dodge + 20% DR + 15% magic DR (Deathstalker) for 10s"
+      },
+      {
+        "id": 1966,
+        "name": "Feint",
+        "cooldown": 15,
+        "notes": "40% AoE DR + 20% DR for 6s. 2 charges. Trickster +10% AoE DR"
+      },
+      {
+        "id": 31230,
+        "name": "Cheat Death",
+        "cooldown": 360,
+        "notes": "Fatal attacks reduce to 7% health instead. Passive. Talented"
+      },
+      {
+        "id": 185311,
+        "name": "Crimson Vial",
+        "cooldown": 30,
+        "notes": "Heal 20% of max health"
+      }
+    ],
+    "immunities": [
+      {
+        "id": 31224,
+        "name": "Cloak of Shadows",
+        "cooldown": 120,
+        "notes": "Magic immunity for 5s. Deathstalker: +2s dur or +20% phys DR"
+      }
+    ],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 1766,
+        "name": "Kick",
+        "cooldown": 15,
+        "notes": "Melee range"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 5938,
+        "name": "Shiv",
+        "cooldown": 30,
+        "notes": "Enrage dispel on enemy target. 15s talented"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 2983,
+        "name": "Sprint",
+        "cooldown": 60,
+        "notes": "70% movement speed for 8s"
+      },
+      {
+        "id": 36554,
+        "name": "Shadowstep",
+        "cooldown": 30,
+        "notes": "Teleport behind target + 70% speed for 2s"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 57934,
+        "name": "Tricks of the Trade",
+        "cooldown": 30,
+        "notes": "Redirect threat to target"
+      },
+      {
+        "id": 114018,
+        "name": "Shroud of Concealment",
+        "cooldown": 360,
+        "notes": "Group stealth for 15s"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 408,
+        "name": "Kidney Shot",
+        "cooldown": 30,
+        "notes": "4-10s stun based on combo points"
+      },
+      {
+        "id": 1833,
+        "name": "Cheap Shot",
+        "cooldown": 12,
+        "notes": "6s stun, requires stealth"
+      },
+      {
+        "id": 2094,
+        "name": "Blind",
+        "cooldown": 120,
+        "notes": "1min disorient on any target. Can be 12s/24s CD talented"
+      },
+      {
+        "id": 6770,
+        "name": "Sap",
+        "cooldown": 0,
+        "notes": "1min incap, requires out of combat. Humanoids/Beasts/Demons/Dragonkin"
+      },
+      {
+        "id": 1776,
+        "name": "Gouge",
+        "cooldown": 25,
+        "notes": "4s ST incap. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Rogue specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

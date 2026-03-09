@@ -1,0 +1,71 @@
+{
+  "class": "Warrior",
+  "spec": "Fury",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "warrior.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 184364,
+        "name": "Enraged Regeneration",
+        "cooldown": 120,
+        "notes": "20-30% heal + 30% DR for 8-11s. Fury only. Talented"
+      },
+      {
+        "id": 202168,
+        "name": "Impending Victory",
+        "cooldown": 25,
+        "notes": "30% heal. Reset on kills. +10% max health talented"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 1719,
+        "name": "Recklessness",
+        "cooldown": 90,
+        "notes": "Primary DPS CD. With CDR. Talented"
+      },
+      {
+        "id": 227847,
+        "name": "Bladestorm",
+        "cooldown": 90,
+        "notes": "AoE spin. Talented choice. Replaces Avatar"
+      },
+      {
+        "id": 274195,
+        "name": "Odyn's Fury",
+        "cooldown": 45,
+        "notes": "AoE burst. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "id": 384318,
+      "name": "Thunderous Roar",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Onslaught",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with warrior.json for full ability list",
+    "Kill or Be Killed talent: lets Fury warrior live for 8s after fatal damage — cheat death passive",
+    "Avatar and Bladestorm are on a choice node for Fury",
+    "Fury has no Defensive Stance or Die by the Sword — weaker defensively than Arms",
+    "Piercing Howl: 70% AoE slow for 8-10s + 30% speed to allies. Talented"
+  ]
+}

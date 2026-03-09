@@ -1,0 +1,82 @@
+{
+  "class": "Mage",
+  "spec": "Arcane",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "mage.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 235450,
+        "name": "Prismatic Barrier",
+        "cooldown": 30,
+        "notes": "Shield + 15-25% DR + 25-40% DoT DR. Arcane only"
+      },
+      {
+        "id": 55342,
+        "name": "Mirror Image",
+        "cooldown": 120,
+        "notes": "3 copies of you. Threat drop"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 365350,
+        "name": "Arcane Surge",
+        "cooldown": 90,
+        "notes": "Primary DPS CD. Big burst + mana spend"
+      },
+      {
+        "id": 321507,
+        "name": "Touch of the Magi",
+        "cooldown": 45,
+        "notes": "Damage amplifier on target"
+      },
+      {
+        "id": 205025,
+        "name": "Presence of Mind",
+        "cooldown": 45,
+        "notes": "2 instant Arcane Blasts"
+      }
+    ],
+    "utility": [],
+    "crowdControl": [
+      {
+        "id": 157980,
+        "name": "Supernova",
+        "cooldown": 45,
+        "notes": "Knockup. Talented choice"
+      },
+      {
+        "id": 383121,
+        "name": "Mass Polymorph",
+        "cooldown": 60,
+        "notes": "15s AoE incap. Regens health. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [
+    {
+      "name": "Radiant Spark",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Nether Tempest",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with mage.json for full ability list",
+    "Ice Block and Ice Cold are different abilities — Ice Cold is 70% DR, Ice Block is full immune",
+    "Sunfury hero talent adds CDR and enhanced barrier effects",
+    "Mass Invisibility (110959) is a group invis — powerful M+ utility"
+  ]
+}

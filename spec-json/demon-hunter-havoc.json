@@ -1,0 +1,83 @@
+{
+  "class": "DemonHunter",
+  "spec": "Havoc",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "demon-hunter.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 198589,
+        "name": "Blur",
+        "cooldown": 60,
+        "notes": "25% DR (35% Havoc) for 10s. 2 charges talented"
+      },
+      {
+        "id": 196555,
+        "name": "Netherwalk",
+        "cooldown": 180,
+        "notes": "100% damage immunity for 6s, increased movement. Talented"
+      }
+    ],
+    "immunities": [
+      {
+        "id": 196555,
+        "name": "Netherwalk",
+        "cooldown": 180,
+        "notes": "Full damage immunity for 6s. Talented choice node"
+      }
+    ],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [
+      {
+        "id": 198793,
+        "name": "Vengeful Retreat",
+        "cooldown": 25,
+        "notes": "Backward leap"
+      }
+    ],
+    "offensiveCooldowns": [
+      {
+        "id": 200166,
+        "name": "Metamorphosis",
+        "cooldown": 120,
+        "notes": "DPS meta — leap + transform"
+      },
+      {
+        "id": 323639,
+        "name": "The Hunt",
+        "cooldown": 90,
+        "notes": "Charge + big damage. Talented"
+      },
+      {
+        "id": 258925,
+        "name": "Fel Barrage",
+        "cooldown": 90,
+        "notes": "AoE channel. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Essence Break",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Elysian Decree",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with demon-hunter.json for full ability list",
+    "Netherwalk is listed under both defensives and immunities since it's a full immunity",
+    "Devourer hero talent: Void Metamorphosis replaces base Meta with different functionality",
+    "Mortal Wounds via Blade Dance is passive — not tracked"
+  ]
+}

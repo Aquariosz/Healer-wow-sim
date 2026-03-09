@@ -1,0 +1,51 @@
+{
+  "class": "Warlock",
+  "spec": "Affliction",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "warlock.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 205180,
+        "name": "Summon Darkglare",
+        "cooldown": 120,
+        "notes": "Extends DoTs + damage pet. Talented"
+      },
+      {
+        "id": 386997,
+        "name": "Soul Rot",
+        "cooldown": 60,
+        "notes": "Spread Agony + big drain. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Phantom Singularity",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Vile Taint",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with warlock.json for full ability list",
+    "Hellcaller hero talent: Curse of Weakness and Tongues merged into one curse",
+    "Hellcaller: Unending Resolve auto-applies in AoE",
+    "Mortal Coil is both heal and CC — listed in both categories",
+    "Curse of Weakness (-20% attack speed) and Curse of Tongues (-30% cast speed) are debuffs, not CDs"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "class": "Evoker",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      { "id": 363916, "name": "Obsidian Scales", "cooldown": 90, "notes": "30-40% DR for 12s. 2 charges talented. Scalecommander: +10% DR" },
+      { "id": 374348, "name": "Renewing Blaze", "cooldown": 90, "notes": "HoT that heals based on damage taken" }
+    ],
+    "immunities": [],
+    "raidCooldowns": [
+      { "id": 374227, "name": "Zephyr", "cooldown": 120, "notes": "20% AoE DR + 30% movement speed to 4 closest people. Talented" },
+      { "id": 374968, "name": "Time Spiral", "cooldown": 120, "notes": "Raid gains one free movement CD. Talented" }
+    ],
+    "externals": [
+      { "id": 369459, "name": "Source of Magic", "cooldown": 0, "notes": "Perma mana buff on 1 healer + 3% damage/healing. Talented" }
+    ],
+    "interrupts": [
+      { "id": 351338, "name": "Quell", "cooldown": 20, "notes": "25 yard range" }
+    ],
+    "dispels": [
+      { "id": 365585, "name": "Expunge", "cooldown": 8, "notes": "Poison on friendly target. Preservation adds Magic" },
+      { "id": 374251, "name": "Cauterizing Flames", "cooldown": 60, "notes": "Bleed/Poison/Curse/Disease on friendly target" },
+      { "id": 372048, "name": "Overawe", "cooldown": 90, "notes": "AoE Enrage dispel on enemies. Talented" }
+    ],
+    "movementCooldowns": [
+      { "id": 358267, "name": "Hover", "cooldown": 35, "notes": "2 charges. Move while casting for 6s + 30% speed" },
+      { "id": 370665, "name": "Rescue", "cooldown": 60, "notes": "Moves an ally, clears CC, +100% speed. Talented" }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      { "id": 395152, "name": "Blessing of the Bronze", "cooldown": 0, "notes": "15% CDR to movement abilities for raid" },
+      { "id": 390386, "name": "Unravel", "cooldown": 9, "notes": "Bonus shield damage. Talented" }
+    ],
+    "crowdControl": [
+      { "id": 360806, "name": "Sleep Walk", "cooldown": 0, "notes": "20s disorient, any target, walks towards you" },
+      { "id": 368970, "name": "Tail Swipe", "cooldown": 60, "notes": "Knockup" },
+      { "id": 357214, "name": "Wing Buffet", "cooldown": 60, "notes": "Knockback" },
+      { "id": 372048, "name": "Oppressing Roar", "cooldown": 120, "notes": "10s AoE knockdown + 50% increased CC dur. Talented" },
+      { "id": 355689, "name": "Landslide", "cooldown": 90, "notes": "15s AoE root. Talented" }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Evoker specs (Devastation, Preservation, Augmentation)",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list",
+    "Rescue is available to all specs but was only listed in Pres/Aug movement and Dev defensives — normalized here under movementCooldowns",
+    "Unravel and Oppressing Roar are class-wide talents but not taken by every spec in practice — included here since they are available to all",
+    "Chronowarden hero talent: Warp With Temporality (35s CD, 20% DR for 3s + movement) — available to all specs"
+  ]
+}

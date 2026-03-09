@@ -1,0 +1,78 @@
+{
+  "class": "DemonHunter",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 196718,
+        "name": "Darkness",
+        "cooldown": 300,
+        "notes": "15% chance to ignore any damage for allies for 8-11s. Talented"
+      }
+    ],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 183752,
+        "name": "Disrupt",
+        "cooldown": 15,
+        "notes": "Melee/10 yard range. Gives 15% DR talented"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 278326,
+        "name": "Consume Magic",
+        "cooldown": 10,
+        "notes": "Magic from enemy target. Talented"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 195072,
+        "name": "Fel Rush",
+        "cooldown": 10,
+        "notes": "2 charges. Forward dash"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [],
+    "crowdControl": [
+      {
+        "id": 211881,
+        "name": "Fel Eruption",
+        "cooldown": 45,
+        "notes": "4s ST stun. Talented (Focused Ire/Isolated Prey)"
+      },
+      {
+        "id": 179057,
+        "name": "Chaos Nova",
+        "cooldown": 45,
+        "notes": "2s AoE stun. Fel-Scarred: then 60% slow for 5s"
+      },
+      {
+        "id": 217832,
+        "name": "Imprison",
+        "cooldown": 45,
+        "notes": "1min incap on Demons/Beasts/Humanoids. Talented"
+      },
+      {
+        "id": 207684,
+        "name": "Sigil of Misery",
+        "cooldown": 120,
+        "notes": "15-17s disorient, delayed trigger"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Demon Hunter specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

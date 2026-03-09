@@ -1,0 +1,85 @@
+{
+  "class": "Paladin",
+  "spec": "Retribution",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "paladin.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 184662,
+        "name": "Shield of Vengeance",
+        "cooldown": 90,
+        "notes": "Absorb shield. Ret only"
+      },
+      {
+        "id": 642,
+        "name": "Divine Shield",
+        "cooldown": 300,
+        "notes": "Full immune for 8s. Clears debuffs. +15% CDR talented"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 96231,
+        "name": "Rebuke",
+        "cooldown": 15,
+        "notes": "Melee range"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 213644,
+        "name": "Cleanse Toxins",
+        "cooldown": 8,
+        "notes": "Poison + Disease on friendly target"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 31884,
+        "name": "Avenging Wrath",
+        "cooldown": 120,
+        "notes": "+20% damage/healing/crit. CDR via rotation"
+      },
+      {
+        "id": 343721,
+        "name": "Final Reckoning",
+        "cooldown": 60,
+        "notes": "Damage amplifier. Talented"
+      },
+      {
+        "id": 343527,
+        "name": "Execution Sentence",
+        "cooldown": 60,
+        "notes": "Delayed damage burst. Talented"
+      },
+      {
+        "id": 255937,
+        "name": "Wake of Ashes",
+        "cooldown": 30,
+        "notes": "AoE + Holy Power. Radiant Glory: triggers AW"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Blessing of Summer/Autumn/Winter/Spring",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with paladin.json for full ability list",
+    "Ret's BoSac auto-casts if target drops below 35% health — unique talented behavior",
+    "LoH CDR scales with target's missing health — up to 60% reduction",
+    "Radiant Glory hero talent: Wake of Ashes can proc Avenging Wrath"
+  ]
+}

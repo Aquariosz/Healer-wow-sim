@@ -1,0 +1,84 @@
+{
+  "class": "Priest",
+  "spec": "Discipline",
+  "role": "HEALER",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "priest.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 246287,
+        "name": "Evangelism",
+        "cooldown": 90,
+        "notes": "Extends Atonement by 6s. Disc only"
+      },
+      {
+        "id": 62618,
+        "name": "Power Word: Barrier",
+        "cooldown": 180,
+        "notes": "20% DR AoE dome for 8s. Talented choice"
+      },
+      {
+        "id": 421453,
+        "name": "Ultimate Penitence",
+        "cooldown": 240,
+        "notes": "Big AoE heal/damage from above. Talented choice"
+      }
+    ],
+    "externals": [
+      {
+        "id": 33206,
+        "name": "Pain Suppression",
+        "cooldown": 180,
+        "notes": "40-50% DR for 8s. CDR and 2 charges talented"
+      },
+      {
+        "id": 73325,
+        "name": "Leap of Faith",
+        "cooldown": 90,
+        "notes": "Lifegrip ally to you"
+      }
+    ],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 527,
+        "name": "Purify",
+        "cooldown": 8,
+        "notes": "Magic + Disease on friendly target. Disc/Holy"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 121536,
+        "name": "Angelic Feather",
+        "cooldown": 20,
+        "notes": "40% speed boost pickup"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Spirit Shell",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Mindbender",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with priest.json for full ability list",
+    "Disc has no interrupt — Silence is Shadow only",
+    "PW:Barrier and Ultimate Penitence are on a choice node",
+    "Archon hero talent: Halo (1min CD) is a raid cooldown option",
+    "Pain Suppression can have 2 charges or heal for 15% max health — talented choice"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "class": "Paladin",
+  "spec": "Holy",
+  "role": "HEALER",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "paladin.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 498,
+        "name": "Divine Protection",
+        "cooldown": 60,
+        "notes": "20% DR for 8s + 15% healing taken talented"
+      },
+      {
+        "id": 642,
+        "name": "Divine Shield",
+        "cooldown": 300,
+        "notes": "Full immune for 8s. Clears debuffs"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 31821,
+        "name": "Aura Mastery",
+        "cooldown": 180,
+        "notes": "Empowers chosen aura for 8s. Primary healing CD"
+      },
+      {
+        "id": 31884,
+        "name": "Avenging Wrath",
+        "cooldown": 120,
+        "notes": "+20% damage/healing/crit for 20s"
+      },
+      {
+        "id": 216331,
+        "name": "Avenging Crusader",
+        "cooldown": 30,
+        "notes": "Heal via damage for 15s. Talented. Replaces AW"
+      }
+    ],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 4987,
+        "name": "Cleanse",
+        "cooldown": 8,
+        "notes": "Magic + Poison + Disease on friendly target. Holy only"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 375576,
+        "name": "Divine Toll",
+        "cooldown": 45,
+        "notes": "Multi-target Holy Shock. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "id": 96231,
+      "name": "Rebuke",
+      "reason": "Removed from Holy in Midnight"
+    },
+    {
+      "id": 388007,
+      "name": "Blessing of Summer",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "id": 20066,
+      "name": "Repentance",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with paladin.json for full ability list",
+    "Holy Paladin lost Rebuke in Midnight — no interrupt available",
+    "Avenging Wrath and Avenging Crusader are on a choice node",
+    "Aura Mastery empowers whichever aura is active (Devotion, Concentration, etc.)",
+    "Lightsmith hero talent provides passive CDR to many abilities"
+  ]
+}

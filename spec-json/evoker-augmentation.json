@@ -1,0 +1,37 @@
+{
+  "class": "Evoker",
+  "spec": "Augmentation",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "evoker.json",
+  "abilities": {
+    "personalDefensives": [
+      { "id": 404195, "name": "Defy Fate", "cooldown": 0, "notes": "Cheat death passive. Aug only" }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [
+      { "id": 360827, "name": "Blistering Scales", "cooldown": 30, "notes": "+20% armor buff on target. Aug only" },
+      { "id": 395152, "name": "Ebon Might", "cooldown": 0, "notes": "Rotational damage buff on allies. Aug signature" },
+      { "id": 410089, "name": "Prescience", "cooldown": 12, "notes": "Crit buff on target. Rotational. Aug signature" }
+    ],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      { "id": 403631, "name": "Breath of Eons", "cooldown": 120, "notes": "Fly forward + big damage echo on buffed allies" }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Merge with evoker.json for full ability list",
+    "Defy Fate is a passive cheat death — not tracked as an active cast",
+    "Ebon Might and Prescience are rotational buffs, not traditional CDs — tracked as externals for completeness",
+    "Aug is unique in that most of its value comes from buffing allies, not personal damage",
+    "Timelessness provides 30% threat reduction — passive, not tracked"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "class": "Priest",
+  "spec": "Shadow",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "priest.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 47585,
+        "name": "Dispersion",
+        "cooldown": 120,
+        "notes": "75% DR for 6s. Heals 25-50% max HP. Shadow only"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 15286,
+        "name": "Vampiric Embrace",
+        "cooldown": 120,
+        "notes": "Heals allies when doing damage for 12s. Shadow only"
+      }
+    ],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 15487,
+        "name": "Silence",
+        "cooldown": 30,
+        "notes": "40 yard range"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 213634,
+        "name": "Purify Disease",
+        "cooldown": 8,
+        "notes": "Disease on friendly target. Shadow only"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 73325,
+        "name": "Leap of Faith",
+        "cooldown": 90,
+        "notes": "Lifegrip ally to you. +40% speed talented. Cast twice talented"
+      }
+    ],
+    "offensiveCooldowns": [
+      {
+        "id": 228260,
+        "name": "Voidform",
+        "cooldown": 90,
+        "notes": "Primary DPS CD. Shadow transformation"
+      },
+      {
+        "id": 10060,
+        "name": "Power Infusion",
+        "cooldown": 120,
+        "notes": "20% Haste. Can be cast on self or ally"
+      }
+    ],
+    "utility": [
+      {
+        "id": 121536,
+        "name": "Angelic Feather",
+        "cooldown": 20,
+        "notes": "40% speed boost pickup"
+      }
+    ],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Void Torrent",
+      "reason": "Reworked/removed in Midnight"
+    },
+    {
+      "name": "Shadow Crash",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with priest.json for full ability list",
+    "Protective Light: Flash Heal gives 10% DR for 10s — passive, not tracked",
+    "Oracle hero talent: Desperate Prayer has 30s duration instead of 10s",
+    "Leap of Faith can be cast twice back to back with hero talent",
+    "Power Infusion listed under both externals and offensives — dual use"
+  ]
+}

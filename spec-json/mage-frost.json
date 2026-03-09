@@ -1,0 +1,88 @@
+{
+  "class": "Mage",
+  "spec": "Frost",
+  "role": "RANGED_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "mage.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 11426,
+        "name": "Ice Barrier",
+        "cooldown": 30,
+        "notes": "Shield + 10% phys DR. 2 charges talented. Frostfire: casts Blazing Barrier too"
+      },
+      {
+        "id": 235219,
+        "name": "Cold Snap",
+        "cooldown": 300,
+        "notes": "Resets CD of Ice Block/Ice Cold/Frost Nova/Cone of Cold/Ice Barrier. Talented"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 12472,
+        "name": "Icy Veins",
+        "cooldown": 120,
+        "notes": "Primary DPS CD. Haste buff"
+      },
+      {
+        "id": 84714,
+        "name": "Frozen Orb",
+        "cooldown": 30,
+        "notes": "AoE damage + FoF procs. 30s as Spellslinger"
+      },
+      {
+        "id": 205021,
+        "name": "Ray of Frost",
+        "cooldown": 45,
+        "notes": "ST channel. 2 charges. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": [
+      {
+        "id": 157980,
+        "name": "Supernova",
+        "cooldown": 45,
+        "notes": "Knockup. Talented"
+      },
+      {
+        "id": 120,
+        "name": "Cone of Cold",
+        "cooldown": 25,
+        "notes": "50% AoE slow for 8s"
+      },
+      {
+        "id": 157997,
+        "name": "Ice Nova",
+        "cooldown": 25,
+        "notes": "2s root. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [
+    {
+      "name": "Ebonbolt",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Comet Storm (old)",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with mage.json for full ability list",
+    "Cold Snap resets many Frost abilities — very powerful defensive reset",
+    "Frostfire hero talent merges Ice and Fire barriers for double shielding",
+    "Ice Block can be 2 charges and allow movement with hero talents"
+  ]
+}

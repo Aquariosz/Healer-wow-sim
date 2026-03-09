@@ -1,0 +1,50 @@
+{
+  "class": "Rogue",
+  "spec": "Subtlety",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "rogue.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 121471,
+        "name": "Shadow Blades",
+        "cooldown": 90,
+        "notes": "Primary DPS CD"
+      },
+      {
+        "id": 185313,
+        "name": "Shadow Dance",
+        "cooldown": 60,
+        "notes": "2 charges. Enter stealth-like state for burst"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Shadowstrike (old)",
+      "reason": "Reworked in Midnight"
+    },
+    {
+      "name": "Secret Technique",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with rogue.json for full ability list",
+    "Shadow Dance is a 2-charge burst enabler — functions like a mini CD",
+    "Night Terrors talent: frequently available 50% slow with Shuriken Storm. Sub only",
+    "Cheat Death is passive — tracked for death prevention only"
+  ]
+}

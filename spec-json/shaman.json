@@ -1,0 +1,114 @@
+{
+  "class": "Shaman",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 108271,
+        "name": "Astral Shift",
+        "cooldown": 120,
+        "notes": "40-60% DR for 12s. Talented for extra DR"
+      },
+      {
+        "id": 462854,
+        "name": "Reincarnation",
+        "cooldown": 1800,
+        "notes": "Self-rez (Ankh). 30min CD with CDR talents"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 57994,
+        "name": "Wind Shear",
+        "cooldown": 12,
+        "notes": "30 yard range. Resto has 30s CD"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 370,
+        "name": "Purge",
+        "cooldown": 0,
+        "notes": "Magic from enemy target. Talented"
+      },
+      {
+        "id": 378773,
+        "name": "Greater Purge",
+        "cooldown": 12,
+        "notes": "2x Magic from enemy target. Talented"
+      },
+      {
+        "id": 383013,
+        "name": "Poison Cleansing Totem",
+        "cooldown": 120,
+        "notes": "AoE Poison removal over 6-9s. Talented"
+      },
+      {
+        "id": 8143,
+        "name": "Tremor Totem",
+        "cooldown": 60,
+        "notes": "Breaks Fear/Charm/Sleep from nearby allies over 10s"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 58875,
+        "name": "Spirit Walk",
+        "cooldown": 60,
+        "notes": "Remove movement impairs + 60% speed for 8s"
+      },
+      {
+        "id": 192063,
+        "name": "Gust of Wind",
+        "cooldown": 30,
+        "notes": "Forward dash. Talented"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [],
+    "crowdControl": [
+      {
+        "id": 192058,
+        "name": "Capacitor Totem",
+        "cooldown": 60,
+        "notes": "3s AoE stun, delayed trigger. Talented"
+      },
+      {
+        "id": 51514,
+        "name": "Hex",
+        "cooldown": 30,
+        "notes": "1min incap on Humanoids/Beasts + 70% slow after. Talented"
+      },
+      {
+        "id": 51485,
+        "name": "Earthgrab Totem",
+        "cooldown": 30,
+        "notes": "AoE root for 8s then 50% slow. Talented"
+      },
+      {
+        "id": 2484,
+        "name": "Earthbind Totem",
+        "cooldown": 30,
+        "notes": "50% AoE slow for 20-30s"
+      },
+      {
+        "id": 196840,
+        "name": "Frost Shock",
+        "cooldown": 0,
+        "notes": "50% ST slow for 6s. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Shaman specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

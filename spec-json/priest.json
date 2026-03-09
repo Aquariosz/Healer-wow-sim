@@ -1,0 +1,84 @@
+{
+  "class": "Priest",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 19236,
+        "name": "Desperate Prayer",
+        "cooldown": 90,
+        "notes": "+25-35% max health for 10s. Oracle: 30s dur"
+      },
+      {
+        "id": 586,
+        "name": "Fade",
+        "cooldown": 30,
+        "notes": "10% DR for 10s + threat drop"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [
+      {
+        "id": 10060,
+        "name": "Power Infusion",
+        "cooldown": 120,
+        "notes": "20% Haste for 20s on target"
+      }
+    ],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 528,
+        "name": "Dispel Magic",
+        "cooldown": 0,
+        "notes": "Magic from enemy target"
+      },
+      {
+        "id": 32375,
+        "name": "Mass Dispel",
+        "cooldown": 120,
+        "notes": "AoE Magic dispel on friendly AND enemy targets. Can break immunities"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 21562,
+        "name": "Power Word: Fortitude",
+        "cooldown": 0,
+        "notes": "+5% Stamina raid buff"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 205364,
+        "name": "Dominate Mind",
+        "cooldown": 30,
+        "notes": "30s mind control. Not Mech/Demon/Undead. Talented"
+      },
+      {
+        "id": 9484,
+        "name": "Shackle Undead",
+        "cooldown": 0,
+        "notes": "50s incap on Undead/Aberrations. Talented (Shackle Horror)"
+      },
+      {
+        "id": 8122,
+        "name": "Psychic Scream",
+        "cooldown": 40,
+        "notes": "8s AoE disorient + 4s root after. Archon: triggers twice"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Priest specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

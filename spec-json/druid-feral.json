@@ -1,0 +1,77 @@
+{
+  "class": "Druid",
+  "spec": "Feral",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "druid.json",
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 61336,
+        "name": "Survival Instincts",
+        "cooldown": 180,
+        "notes": "50-60% DR for 6s"
+      }
+    ],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [
+      {
+        "id": 106839,
+        "name": "Skull Bash",
+        "cooldown": 15,
+        "notes": "13-18 yard range"
+      }
+    ],
+    "dispels": [
+      {
+        "id": 2782,
+        "name": "Remove Corruption",
+        "cooldown": 8,
+        "notes": "Curse + Poison on friendly target"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 106951,
+        "name": "Berserk",
+        "cooldown": 180,
+        "notes": "Primary DPS CD. OR Incarnation talented"
+      },
+      {
+        "id": 102543,
+        "name": "Incarnation: Avatar of Ashamane",
+        "cooldown": 180,
+        "notes": "Replaces Berserk. Talented"
+      },
+      {
+        "id": 391528,
+        "name": "Convoke the Spirits",
+        "cooldown": 120,
+        "notes": "Channel 16 random spells. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Adaptive Swarm",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Brutal Slash",
+      "reason": "Baseline / reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with druid.json for full ability list",
+    "Bear Form provides +25-45% max health passively",
+    "Druid of the Claw hero talent: Frenzied Regen can be cast in cat form, gives +10% max health",
+    "Berserk and Incarnation are on a choice node"
+  ]
+}

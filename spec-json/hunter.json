@@ -1,0 +1,116 @@
+{
+  "class": "Hunter",
+  "spec": null,
+  "role": null,
+  "expansion": "Midnight",
+  "version": 1,
+  "abilities": {
+    "personalDefensives": [
+      {
+        "id": 264735,
+        "name": "Survival of the Fittest",
+        "cooldown": 90,
+        "notes": "30% DR for 6-8s. 2 charges talented. Pack Leader: +10% DR"
+      },
+      {
+        "id": 109304,
+        "name": "Exhilaration",
+        "cooldown": 120,
+        "notes": "30% heal + 12% HoT"
+      },
+      {
+        "id": 186265,
+        "name": "Aspect of the Turtle",
+        "cooldown": 180,
+        "notes": "Full immune for 8s. Cannot attack. Removes poisons/diseases talented"
+      }
+    ],
+    "immunities": [
+      {
+        "id": 186265,
+        "name": "Aspect of the Turtle",
+        "cooldown": 180,
+        "notes": "Full immune for 8s but cannot attack"
+      }
+    ],
+    "raidCooldowns": [],
+    "externals": [
+      {
+        "id": 53480,
+        "name": "Roar of Sacrifice",
+        "cooldown": 120,
+        "notes": "15% DR for 8s on target, damage transferred to pet"
+      }
+    ],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 19801,
+        "name": "Tranquilizing Shot",
+        "cooldown": 10,
+        "notes": "Magic/Enrage from enemy target. Choice: 3 targets or 5s CDR"
+      }
+    ],
+    "movementCooldowns": [
+      {
+        "id": 781,
+        "name": "Disengage",
+        "cooldown": 20,
+        "notes": "Backward leap"
+      },
+      {
+        "id": 186257,
+        "name": "Aspect of the Cheetah",
+        "cooldown": 180,
+        "notes": "90% speed for 3s then 30% for 9s"
+      }
+    ],
+    "offensiveCooldowns": [],
+    "utility": [
+      {
+        "id": 34477,
+        "name": "Misdirection",
+        "cooldown": 30,
+        "notes": "Redirect threat"
+      },
+      {
+        "id": 5384,
+        "name": "Feign Death",
+        "cooldown": 30,
+        "notes": "Drop aggro. Removes poisons/diseases talented"
+      },
+      {
+        "id": 257284,
+        "name": "Hunter's Mark",
+        "cooldown": 0,
+        "notes": "+3% damage taken on target"
+      }
+    ],
+    "crowdControl": [
+      {
+        "id": 19577,
+        "name": "Intimidation",
+        "cooldown": 60,
+        "notes": "5s pet stun. Talented"
+      },
+      {
+        "id": 187650,
+        "name": "Freezing Trap",
+        "cooldown": 30,
+        "notes": "1min immobilize on any target"
+      },
+      {
+        "id": 187698,
+        "name": "Tar Trap",
+        "cooldown": 30,
+        "notes": "50% AoE slow for 30s. Talented"
+      }
+    ]
+  },
+  "removedAbilities": [],
+  "replacementMap": {},
+  "notes": [
+    "Class-level file: abilities shared across all Hunter specs",
+    "Spec files contain only spec-specific additions — merge with this file for full spec ability list"
+  ]
+}

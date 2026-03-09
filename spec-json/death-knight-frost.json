@@ -1,0 +1,56 @@
+{
+  "class": "DeathKnight",
+  "spec": "Frost",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "death-knight.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 51271,
+        "name": "Pillar of Frost",
+        "cooldown": 60,
+        "notes": "Primary DPS CD"
+      },
+      {
+        "id": 279302,
+        "name": "Frostwyrm's Fury",
+        "cooldown": 90,
+        "notes": "Big AoE + 3s stun. Can recast for 1.5s stun talented"
+      },
+      {
+        "id": 47568,
+        "name": "Empower Rune Weapon",
+        "cooldown": 120,
+        "notes": "Haste buff + resource gen"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Frostscythe",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Gathering Storm",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with death-knight.json for full ability list",
+    "Frostwyrm's Fury also functions as AoE stun — listed under offensive since primary use is damage",
+    "Deathbringer hero talent provides significant CDR to Pillar of Frost and Lichborne",
+    "Reaper's Mark is a hero talent offensive CD — not tracked separately as it's part of rotation"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "class": "Rogue",
+  "spec": "Outlaw",
+  "role": "MELEE_DPS",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "rogue.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [],
+    "externals": [],
+    "interrupts": [],
+    "dispels": [],
+    "movementCooldowns": [
+      {
+        "id": 195457,
+        "name": "Grappling Hook",
+        "cooldown": 60,
+        "notes": "Leap to location. Outlaw only"
+      }
+    ],
+    "offensiveCooldowns": [
+      {
+        "id": 13750,
+        "name": "Adrenaline Rush",
+        "cooldown": 180,
+        "notes": "Primary DPS CD. Haste + energy regen"
+      },
+      {
+        "id": 51690,
+        "name": "Killing Spree",
+        "cooldown": 120,
+        "notes": "Teleport between targets dealing damage. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Blade Flurry (old)",
+      "reason": "Reworked in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with rogue.json for full ability list",
+    "Grappling Hook is Outlaw-only movement — replaces Shadowstep",
+    "Outlaw has the most CDR to Blind via talents",
+    "Cheat Death is passive — tracked for death prevention only"
+  ]
+}

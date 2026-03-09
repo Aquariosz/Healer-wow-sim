@@ -1,0 +1,71 @@
+{
+  "class": "Druid",
+  "spec": "Restoration",
+  "role": "HEALER",
+  "expansion": "Midnight",
+  "version": 1,
+  "inherits": "druid.json",
+  "abilities": {
+    "personalDefensives": [],
+    "immunities": [],
+    "raidCooldowns": [
+      {
+        "id": 740,
+        "name": "Tranquility",
+        "cooldown": 180,
+        "notes": "Major raid healing CD"
+      }
+    ],
+    "externals": [
+      {
+        "id": 102342,
+        "name": "Ironbark",
+        "cooldown": 90,
+        "notes": "20% DR for 12-16s. Healed by rejuvs talented"
+      }
+    ],
+    "interrupts": [],
+    "dispels": [
+      {
+        "id": 88423,
+        "name": "Nature's Cure",
+        "cooldown": 8,
+        "notes": "Magic + Curse + Poison on friendly target. Resto only"
+      }
+    ],
+    "movementCooldowns": [],
+    "offensiveCooldowns": [
+      {
+        "id": 33891,
+        "name": "Incarnation: Tree of Life",
+        "cooldown": 180,
+        "notes": "Tree form with enhanced healing. Talented"
+      },
+      {
+        "id": 391528,
+        "name": "Convoke the Spirits",
+        "cooldown": 120,
+        "notes": "Channel 16 random spells. Talented"
+      }
+    ],
+    "utility": [],
+    "crowdControl": []
+  },
+  "removedAbilities": [
+    {
+      "name": "Flourish",
+      "reason": "Removed in Midnight"
+    },
+    {
+      "name": "Adaptive Swarm",
+      "reason": "Removed in Midnight"
+    }
+  ],
+  "replacementMap": {},
+  "notes": [
+    "Merge with druid.json for full ability list",
+    "Resto Druid has no interrupt — Solar Beam is Balance only, Skull Bash is Feral/Guardian",
+    "Bear Form provides +25-45% max health passively for emergency survival",
+    "Ironbark is the primary Resto external defensive"
+  ]
+}

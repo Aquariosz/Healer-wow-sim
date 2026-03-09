@@ -91,19 +91,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     slotGroup.appendChild(slotTitle);
 
                     itemsInSlot.forEach(item => {
+                        // Rarity Border Logic (MEGA-PROMPT SPEC)
+                        let rarityClass = 'quality-rare';
+                        if (item.ilevel >= 610) { rarityClass = 'quality-epic'; }
+                        if (item.id === 2068200 || item.id === 2068201) { rarityClass = 'quality-legendary'; } // Example for Fyr'alath/Nasz'uro in future
+
                         // Create a card for each item
                         const card = document.createElement('label');
-                        card.className = `gear-card ${item.selected ? 'selected' : ''}`;
+                        card.className = `gear-card ${rarityClass} ${item.selected ? 'selected' : ''}`;
                         card.style.cursor = 'pointer'; // Make it clickable
 
-                        // Checkbox (hidden for styling, or visible but seamlessly integrated)
+                        // Checkbox (Visualmente Customizada pelo CSS)
+                        const cbWrapper = document.createElement('div');
+                        cbWrapper.className = 'gear-checkbox-wrapper';
+
                         const cb = document.createElement('input');
                         cb.type = 'checkbox';
                         cb.checked = item.selected;
                         cb.className = 'gear-checkbox';
-                        cb.style.display = 'none'; // we will use the card's visual state instead
                         cb.dataset.raw = item.rawLine;
                         cb.dataset.slot = item.slot;
+
+                        cbWrapper.appendChild(cb);
 
                         // 1. Build Wowhead Query string for both text and icon
                         let whParams = [];
@@ -136,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         const itemLevel = document.createElement('div');
                         itemLevel.className = 'gear-ilvl';
-                        itemLevel.innerHTML = `<span style="color:var(--text-muted); font-size: 0.8em; margin-right:4px;">ILVL</span>${item.ilevel || '?'}`;
+                        itemLevel.innerHTML = `<span style="color:var(--text-muted); font-size: 0.8em; margin-right:4px; font-weight: 500;">ILVL</span><strong style="color:var(--text-main); font-weight:700;">${item.ilevel || '?'}</strong>`;
 
                         if (item.source !== 'equipped') {
                             const sourceTag = document.createElement('span');
@@ -153,11 +162,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         detailsContent.appendChild(itemName);
                         detailsContent.appendChild(itemLevel);
 
-                        card.appendChild(cb);
                         card.appendChild(iconPlaceholder);
                         card.appendChild(detailsContent);
+                        card.appendChild(cbWrapper); // Checkbox por último para ficar à direita
 
                         // Card Selection Logic
+                        card.addEventListener('click', (e) => {
+                            // Previne clique duplicado caso já tenha clicado exatamente na checkbox
+                            if (e.target !== cb) {
+                                cb.checked = !cb.checked;
+                            }
+                            // Dispara o evento change para sincronizar a classe CSS
+                            cb.dispatchEvent(new Event('change'));
+                        });
+
                         cb.addEventListener('change', (e) => {
                             if (e.target.checked) card.classList.add('selected');
                             else card.classList.remove('selected');

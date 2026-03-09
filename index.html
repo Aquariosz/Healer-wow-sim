@@ -1,363 +1,530 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html class="dark" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
-    <title>HealSim - WoW Healer Simulator</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <script>const whTooltips = { colorLinks: false, iconizeLinks: true, renameLinks: false };</script>
-    <script src="https://wow.zamimg.com/widgets/power.js"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HealSim | Pro WoW Healer Simulation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffd000",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                        "surface": "#1e1e1e",
+                        "border-dark": "#2D2D2D",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333333;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444444;
+        }
+
+        .item-rarity-epic {
+            border-left: 4px solid #a335ee;
+        }
+
+        .item-rarity-legendary {
+            border-left: 4px solid #ff8000;
+        }
+
+        .class-priest {
+            color: #ffffff;
+        }
+
+        .class-druid {
+            color: #ff7d0a;
+        }
+
+        .class-paladin {
+            color: #f58cba;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="dashboard-container">
-        <!-- Top Navigation / Class Selector -->
-        <header class="topbar">
-            <div class="logo">
-                <span class="logo-gold">Heal</span>Sim
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display h-screen flex flex-col overflow-hidden">
+    <header class="h-16 flex items-center justify-between px-6 border-b border-border-dark bg-surface z-50">
+        <div class="flex items-center gap-8">
+            <div class="flex items-center gap-2">
+                <div class="size-8 bg-primary rounded flex items-center justify-center">
+                    <span class="material-symbols-outlined text-background-dark font-bold">medical_services</span>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight text-slate-100">Heal<span class="text-primary">Sim</span>
+                </h1>
             </div>
-            <div class="class-selector">
-                <button class="class-btn active" id="btn-priest">
-                    <img src="assets/holy_priest_icon.png" alt="Holy Priest" class="class-icon">
-                    <span>Holy Priest</span>
-                </button>
-                <button class="class-btn" id="btn-evoker">
-                    <img src="assets/evoker_icon.png" alt="Preservation Evoker" class="class-icon">
-                    <span>Preservation Evoker</span>
-                </button>
+            <div class="h-8 w-px bg-border-dark mx-2"></div>
+            <div class="flex items-center gap-4">
+                <select
+                    class="bg-background-dark border border-border-dark text-xs rounded-lg px-3 py-1 text-slate-300 focus:ring-primary focus:border-primary">
+                    <option>Dragonflight v10.2.7</option>
+                    <option>The War Within Beta</option>
+                    <option>Classic SoD</option>
+                </select>
+                <div class="relative">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
+                    <input
+                        class="bg-background-dark border-none text-sm rounded-lg pl-9 pr-4 py-1.5 w-64 placeholder:text-slate-600 focus:ring-1 focus:ring-primary"
+                        placeholder="Search spells or items..." type="text" />
+                </div>
             </div>
-            <div class="user-profile">
-                <!-- User placeholder -->
-                <div class="avatar"></div>
+        </div>
+        <nav class="flex items-center gap-6">
+            <a class="text-sm font-medium text-primary border-b-2 border-primary pb-5 mt-5" href="#">Top Gear</a>
+            <a class="text-sm font-medium text-slate-400 hover:text-slate-100 transition-colors"
+                href="#">Droptimizer</a>
+            <a class="text-sm font-medium text-slate-400 hover:text-slate-100 transition-colors" href="#">Talents</a>
+            <a class="text-sm font-medium text-slate-400 hover:text-slate-100 transition-colors" href="#">Quick Sim</a>
+            <div class="flex items-center gap-3 ml-4">
+                <button class="p-2 text-slate-400 hover:text-primary"><span
+                        class="material-symbols-outlined">notifications</span></button>
+                <button onclick="window.location.href='settings.html'"
+                    class="p-2 text-slate-400 hover:text-primary"><span
+                        class="material-symbols-outlined">settings</span></button>
+                <div onclick="window.location.href='general_settings.html'"
+                    class="size-9 rounded-full bg-primary/20 border border-primary/50 flex items-center justify-center overflow-hidden cursor-pointer">
+                    <img class="size-full object-cover" data-alt="User avatar profile picture"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIFxeDKTvcM5dz5i-I-bpZrgWZHkOJHxt_CEkSaozBpjG_jsvvmW2gbsU5RujKhogkeH6pOQvRTXVZR-Y8JPU2KI2XWDTv0cewUSqyU58um157r6r7bRcYTOiIfZ_Z4gAdUXbUuM8wl3XXoTZXfHM7IWYYIVhmYhmgVY0C9nODQaHjPv06hppfA3I03XUhXer8Q0sqrkBn-6ROBcUS1ETaVXSSpDu9cUP2SLjCiOYzrHsPWiNv8VNZmyYptIiLIoqiLGMJ2RbyWYRE" />
+                </div>
             </div>
-        </header>
-
-        <div class="main-layout">
-            <!-- Center Panel -->
-            <main class="center-panel">
-                <section class="simulation-options-section">
-                    <h2 class="section-title">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            style="margin-right: 8px; vertical-align: middle;">
-                            <polyline points="9 11 12 14 22 4"></polyline>
-                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                        </svg>
-                        Simulation Options
-                    </h2>
-
-                    <div class="sim-options-grid">
-                        <div class="sim-option-group">
-                            <label for="fight-style">Fight Style</label>
-                            <select id="fight-style" class="sim-dropdown">
-                                <option value="Dungeon">Mythic+ (5-man)</option>
-                                <option value="Raid">Raid (20-man)</option>
-                            </select>
-                            <span class="option-hint">Scales base healing throughput & AoE effectiveness.</span>
-                        </div>
-
-                        <div class="sim-option-group">
-                            <label for="fight-length">Fight Length</label>
-                            <select id="fight-length" class="sim-dropdown">
-                                <option value="120">2 minutes (Quick Boss / Trash)</option>
-                                <option value="180" selected>3 minutes (Average M+ Boss)</option>
-                                <option value="300">5 minutes (Raid Boss / Tyrannical)</option>
-                                <option value="420">7 minutes (End Boss)</option>
-                            </select>
-                            <span class="option-hint">Longer fights heavily tax Mana Efficiency.</span>
-                        </div>
-
-                        <div class="sim-option-group" style="grid-column: span 2;">
-                            <label for="healing-requirement">Primary Healing Requirement</label>
-                            <select id="healing-requirement" class="sim-dropdown">
-                                <option value="Balanced" selected>Balanced Profile (Mix of all)</option>
-                                <option value="Spot">Spot Healing (Heavy Single Target tank/player damage)</option>
-                                <option value="Burst">Burst Healing (Sudden massive AoE drops)</option>
-                                <option value="Sustain">Sustain Healing (Heavy continuous aura damage rot)</option>
-                                <option value="Ramp">Ramp Healing (Large predictable hits requiring setup)</option>
-                            </select>
-                            <span class="option-hint">Dictates efficiency based on Class Toolkit & Talents.</span>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="simulation-config-section">
-                    <div class="section-header-row">
-                        <h2 class="section-title">Player Configuration</h2>
-                        <button id="btn-load-stats" class="btn-secondary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                            Load Real Stats from Log
+        </nav>
+    </header>
+    <div class="bg-surface/50 border-b border-border-dark px-6 py-3 flex items-center gap-8 shadow-lg z-40">
+        <div class="flex items-center gap-2">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Fight Style:</span>
+            <div class="flex bg-background-dark rounded-lg p-1 gap-1">
+                <button class="px-3 py-1 text-xs font-bold bg-primary text-background-dark rounded-md">Mythic+</button>
+                <button class="px-3 py-1 text-xs font-bold text-slate-400 hover:text-slate-200 rounded-md">Raid:
+                    Patchwerk</button>
+                <button class="px-3 py-1 text-xs font-bold text-slate-400 hover:text-slate-200 rounded-md">Raid:
+                    Spread</button>
+            </div>
+        </div>
+        <div class="flex items-center gap-4 flex-1 max-w-xs">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider shrink-0">Length:</span>
+            <input class="w-full h-1.5 bg-background-dark rounded-lg appearance-none cursor-pointer accent-primary"
+                type="range" />
+            <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-0.5 rounded">5:00</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Healing Profile:</span>
+            <select
+                class="bg-background-dark border border-border-dark text-xs font-bold rounded-lg px-3 py-1 text-primary focus:ring-primary">
+                <option>Balanced Profile</option>
+                <option>Spot Healing</option>
+                <option>Burst Healing</option>
+                <option>Sustain Healing</option>
+                <option>Ramp Healing</option>
+            </select>
+        </div>
+    </div>
+    <main class="flex flex-1 overflow-hidden">
+        <aside class="w-80 border-r border-border-dark bg-surface flex flex-col overflow-y-auto">
+            <div class="p-6 space-y-8">
+                <div>
+                    <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">terminal</span> SimC Import
+                    </h3>
+                    <div class="relative group">
+                        <textarea
+                            class="w-full h-32 bg-background-dark border border-border-dark rounded-lg p-3 text-xs font-mono text-slate-400 focus:ring-1 focus:ring-primary focus:border-primary resize-none transition-all group-hover:border-slate-600"
+                            placeholder="Paste your /simc string here..."></textarea>
+                        <button
+                            class="absolute bottom-2 right-2 bg-primary/10 hover:bg-primary/20 text-primary p-1.5 rounded-md transition-colors">
+                            <span class="material-symbols-outlined text-sm">content_paste</span>
                         </button>
                     </div>
-
-                    <div class="config-grid">
-                        <!-- Stats Column / SimC Import -->
-                        <div>
-                            <div class="stats-panel" id="simc-import-section">
-                                <h3 class="panel-subtitle"
-                                    style="display: flex; justify-content: space-between; align-items: center;">
-                                    Import /simc Output
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" style="color: var(--gold);">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                        <polyline points="7 10 12 15 17 10"></polyline>
-                                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                                    </svg>
-                                </h3>
-                                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Paste your
-                                    SimulationCraft output below to load your Equipped Gear, Bags, and Great Vault.</p>
-                                <textarea id="simc-input-text" class="stat-input"
-                                    style="width: 100%; height: 120px; font-family: monospace; resize: vertical; padding: 0.5rem; border-color: var(--gold);"
-                                    placeholder="Paste SimC text here..."></textarea>
-                                <button id="btn-import-simc" class="btn-primary"
-                                    style="width: 100%; margin-top: 1rem; padding: 0.75rem;">Import Gear &
-                                    Talents</button>
-                            </div>
-
-                            <div class="stats-panel" style="margin-top: 1.5rem; opacity: 0.7;">
-                                <h3 class="panel-subtitle">Manual Stat Overrides</h3>
-
-                                <div class="stat-row"
-                                    style="border-bottom: 1px solid var(--border-metal); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                                    <label style="color: var(--gold);">Stat Profile</label>
-                                    <div style="display: flex; gap: 1rem;">
-                                        <label
-                                            style="color: var(--text-main); width: 80px; text-align: center;">Base</label>
-                                        <label style="color: #4ade80; width: 80px; text-align: center;">+Item</label>
-                                    </div>
-                                </div>
-                                <div class="stat-row">
-                                    <label>Intellect</label>
-                                    <div style="display: flex; gap: 1rem;">
-                                        <input type="number" id="base-intellect" class="stat-input" style="width: 80px;"
-                                            value="14500">
-                                        <input type="number" id="upg-intellect" class="stat-input"
-                                            style="width: 80px; border-color: rgba(74, 222, 128, 0.5); color: #4ade80;"
-                                            value="0">
-                                    </div>
-                                </div>
-                                <div class="stat-row">
-                                    <label>Haste Rating</label>
-                                    <div style="display: flex; gap: 1rem;">
-                                        <input type="number" id="base-haste" class="stat-input" style="width: 80px;"
-                                            value="4200">
-                                        <input type="number" id="upg-haste" class="stat-input"
-                                            style="width: 80px; border-color: rgba(74, 222, 128, 0.5); color: #4ade80;"
-                                            value="0">
-                                    </div>
-                                </div>
-                                <div class="stat-row">
-                                    <label>Critical Strike</label>
-                                    <div style="display: flex; gap: 1rem;">
-                                        <input type="number" id="base-crit" class="stat-input" style="width: 80px;"
-                                            value="3800">
-                                        <input type="number" id="upg-crit" class="stat-input"
-                                            style="width: 80px; border-color: rgba(74, 222, 128, 0.5); color: #4ade80;"
-                                            value="0">
-                                    </div>
-                                </div>
-                                <div class="stat-row">
-                                    <label>Mastery</label>
-                                    <div style="display: flex; gap: 1rem;">
-                                        <input type="number" id="base-mastery" class="stat-input" style="width: 80px;"
-                                            value="2100">
-                                        <input type="number" id="upg-mastery" class="stat-input"
-                                            style="width: 80px; border-color: rgba(74, 222, 128, 0.5); color: #4ade80;"
-                                            value="0">
-                                    </div>
-                                </div>
-                                <div class="stat-row">
-                                    <label>Versatility</label>
-                                    <div style="display: flex; gap: 1rem;">
-                                        <input type="number" id="base-versatility" class="stat-input"
-                                            style="width: 80px;" value="1500">
-                                        <input type="number" id="upg-versatility" class="stat-input"
-                                            style="width: 80px; border-color: rgba(74, 222, 128, 0.5); color: #4ade80;"
-                                            value="0">
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div>
+                    <h3
+                        class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center justify-between">
+                        <span class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-sm">equalizer</span> Stat Overrides</span>
+                        <button class="text-[10px] text-primary hover:underline">Reset</button>
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between group">
+                            <span class="text-sm text-slate-400 group-hover:text-slate-200">Intellect</span>
+                            <input
+                                class="w-20 bg-background-dark border border-border-dark rounded px-2 py-1 text-xs text-right text-slate-100 focus:border-primary"
+                                type="text" value="12,450" />
                         </div>
-                    </div>
-
-                    <!-- Talents Column -->
-                    <div class="talents-panel">
-                        <h3 class="panel-subtitle">Talents & Synergies</h3>
-
-                        <!-- Visual Talent Calculator -->
-                        <div class="talent-calculator-panel mt-4">
-                            <div class="section-header-row">
-                                <h2 class="section-title">Talent Trees</h2>
-                            </div>
-                            <div class="talent-tree-container"
-                                style="display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 1rem;">
-
-                                <!-- Panel 1: Class Tree -->
-                                <div class="tree-panel"
-                                    style="flex: 1; min-width: 250px; background: rgba(0,0,0,0.2); border-radius: 8px; padding: 1rem;">
-                                    <div
-                                        style="text-align: center; color: var(--gold); margin-bottom: 1rem; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">
-                                        Priest</div>
-                                    <div class="talent-grid class-grid" style="position: relative;">
-                                        <svg class="talent-connections" id="class-links-svg"
-                                            style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0;"></svg>
-                                        <div id="priest-class-tree"
-                                            style="position:relative; z-index:1; display:grid; grid-template-columns: repeat(9, 1fr); gap: 0.5rem;">
-                                        </div>
-                                    </div>
-                                    <div class="talent-points-counter" style="text-align: center; margin-top: 1rem;">
-                                        <span id="class-points-spent">0</span> / 31
-                                    </div>
-                                </div>
-
-                                <!-- Panel 2: Hero Tree -->
-                                <div class="tree-panel hero-panel"
-                                    style="flex: 0.8; min-width: 200px; background: rgba(0,0,0,0.2); border-radius: 8px; padding: 1rem; border: 1px solid rgba(255, 215, 0, 0.3);">
-                                    <div style="text-align: center; color: var(--gold); margin-bottom: 1rem;">
-                                        <select id="hero-talent-select" class="hero-talent-dropdown"
-                                            style="background: transparent; border: none; color: var(--gold); font-size: 1rem; font-weight: bold; cursor: pointer; outline: none; text-align: center; text-transform: uppercase;">
-                                            <option value="archon">Archon</option>
-                                            <option value="oracle">Oracle</option>
-                                        </select>
-                                    </div>
-                                    <div class="talent-grid hero-grid" style="position: relative;">
-                                        <svg class="talent-connections" id="hero-links-svg"
-                                            style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0;"></svg>
-                                        <div id="hero-talent-tree"
-                                            style="position:relative; z-index:1; display:grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem;">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Panel 3: Spec Tree -->
-                                <div class="tree-panel"
-                                    style="flex: 1; min-width: 250px; background: rgba(0,0,0,0.2); border-radius: 8px; padding: 1rem;">
-                                    <div
-                                        style="text-align: center; color: var(--gold); margin-bottom: 1rem; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">
-                                        Holy</div>
-                                    <div class="talent-grid spec-grid" style="position: relative;">
-                                        <svg class="talent-connections" id="spec-links-svg"
-                                            style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0;"></svg>
-                                        <div id="holy-spec-tree"
-                                            style="position:relative; z-index:1; display:grid; grid-template-columns: repeat(9, 1fr); gap: 0.5rem;">
-                                        </div>
-                                    </div>
-                                    <div class="talent-points-counter" style="text-align: center; margin-top: 1rem;">
-                                        <span id="spec-points-spent">0</span> / 30
-                                    </div>
-                                </div> <!-- Closes tree-panel -->
-
-                            </div> <!-- Closes talent-tree-container -->
-                        </div> <!-- Closes talent-calculator-panel -->
-                    </div> <!-- Closes talents-panel -->
-        </div> <!-- Closes config-grid -->
-
-        <!-- Full Width Top Gear Grid (Raidbots Style) -->
-        <div id="top-gear-section"
-            style="display: none; margin-top: 2rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border-metal); border-radius: 8px; padding: 1.5rem;">
-            <div class="section-header-row"
-                style="margin-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.5rem;">
-                <h2 class="section-title" style="color: var(--gold); font-size: 1.2rem;">Top Gear Selection</h2>
-                <span style="font-size: 0.85rem; color: var(--text-muted);">Select multiple pieces of gear to simulate
-                    upgrades</span>
-            </div>
-
-            <div id="gear-list-container" class="raidbots-gear-grid">
-                <!-- JS will inject slot groups and gear cards here -->
-            </div>
-        </div>
-
-        <div class="action-row">
-            <button class="btn-analyze" id="btn-simulate">
-                Run Simulation
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                </svg>
-            </button>
-        </div>
-        </section>
-        </main>
-
-        <!-- Right Panel -->
-        <aside class="right-panel">
-            <div class="panel-header">
-                <h2>Upgrade Results</h2>
-            </div>
-
-            <div class="results-container">
-                <!-- Progress Card -->
-                <div class="result-card performance-card">
-                    <div class="card-title">Healing Output</div>
-
-                    <div class="metric-row">
-                        <span class="metric-label">Real HPS</span>
-                        <span class="metric-value real-value">124.5k</span>
-                    </div>
-
-                    <div class="progress-track" title="Real HPS Output">
-                        <div class="progress-fill real-fill" style="width: 0%;"></div>
-                    </div>
-
-                    <div class="metric-row mt-4">
-                        <span class="metric-label highlight-gold">Upgrade HPS</span>
-                        <div style="display: flex; gap: 0.5rem; align-items: baseline;">
-                            <span class="metric-value potential-value">142.8k</span>
-                            <span id="upgrade-diff-text"
-                                style="color: #4ade80; font-size: 0.9rem; font-weight: 500;"></span>
+                        <div class="flex items-center justify-between group">
+                            <span class="text-sm text-slate-400 group-hover:text-slate-200">Critical Strike</span>
+                            <input
+                                class="w-20 bg-background-dark border border-border-dark rounded px-2 py-1 text-xs text-right text-slate-100 focus:border-primary"
+                                type="text" value="32%" />
                         </div>
-                    </div>
-
-                    <div class="progress-track potential-track" title="Upgrade HPS Output">
-                        <div class="progress-fill potential-fill" style="width: 0%;">
-                            <div class="progress-glow"></div>
+                        <div class="flex items-center justify-between group">
+                            <span class="text-sm text-slate-400 group-hover:text-slate-200">Haste</span>
+                            <input
+                                class="w-20 bg-background-dark border border-border-dark rounded px-2 py-1 text-xs text-right text-slate-100 focus:border-primary"
+                                type="text" value="24%" />
                         </div>
-                    </div>
-
-                    <div class="efficiency-score">
-                        <span>Efficiency</span>
-                        <span class="score-value">87.1%</span>
+                        <div class="flex items-center justify-between group">
+                            <span class="text-sm text-slate-400 group-hover:text-slate-200">Mastery</span>
+                            <input
+                                class="w-20 bg-background-dark border border-border-dark rounded px-2 py-1 text-xs text-right text-slate-100 focus:border-primary"
+                                type="text" value="18%" />
+                        </div>
                     </div>
                 </div>
-
-                <!-- Details Card -->
-                <div class="result-card details-card">
-                    <div class="card-title">Key Insights</div>
-                    <ul class="insights-list">
-                        <li>
-                            <div class="insight-icon warning"></div>
-                            <div class="insight-text">Missed 2x Power Word: Life</div>
-                        </li>
-                        <li>
-                            <div class="insight-icon info"></div>
-                            <div class="insight-text">Overhealing is 15% higher than optimal</div>
-                        </li>
-                        <li>
-                            <div class="insight-icon success"></div>
-                            <div class="insight-text">Divine Hymn timing was perfect</div>
-                        </li>
-                    </ul>
+                <div>
+                    <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">account_tree</span> Active Talents
+                    </h3>
+                    <div class="bg-background-dark rounded-xl border border-border-dark overflow-hidden p-1">
+                        <div class="aspect-video bg-cover bg-center rounded-lg relative"
+                            data-alt="WoW Talent Tree visualization background"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBB0JxSAhCQ7zE9Y8t_rtIWBar2CoZAw8zgE_Eu0b0ZvyH8uBfwRu8Q_uShBN0y_YJBrZvvlUBzk-ObG-XgO6mWNXUsBPSzBN1PvEjCFTNzQnP7cc2dMKQkqBnSQKz9TlJdKd7upRgYDwJyEyytGZsbHZv2pPnZ0nJLjJm-N0eF-eWun7Q4d2vmQEnEzxhx3-ohBUBRFplRxzzu_pzGH4r4urx6vy9A5EOdY15A8NMq9n7BN2QQNZu46y1Ki39OBBnTbiL5nqsTLAyH');">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                <button
+                                    class="bg-primary text-background-dark px-4 py-2 rounded-lg font-bold text-sm shadow-xl flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">open_in_new</span> Edit Tree
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <p class="text-[11px] font-bold text-slate-400 uppercase">Loadout: M+ High Keys</p>
+                            <p class="text-[10px] text-slate-600 truncate mt-1">
+                                C4PAAAAAAAAAAAAAAAAAAAAAAAagZmxYmZmtZmhZGzMDMzyMGzMzYmxMbmZGbGAAAAAwAA</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
-    </div>
-    </div>
-
-    <!-- JavaScript Base -->
-    <script src="simc_parser.js"></script>
-    <script src="talents.js"></script>
-    <script src="script.js"></script>
+        <section class="flex-1 overflow-y-auto bg-background-dark relative">
+            <div class="p-8 max-w-5xl mx-auto space-y-12">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-xl font-bold text-slate-100">Gear Selection</h2>
+                    <div class="flex gap-4">
+                        <div
+                            class="flex items-center gap-2 bg-surface px-3 py-1.5 rounded-lg border border-border-dark">
+                            <span class="text-xs text-slate-500 font-bold uppercase">Source:</span>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input checked=""
+                                    class="form-checkbox bg-background-dark border-slate-600 rounded text-primary focus:ring-primary"
+                                    type="checkbox" />
+                                <span class="text-xs text-slate-300">Equipped</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer ml-2">
+                                <input checked=""
+                                    class="form-checkbox bg-background-dark border-slate-600 rounded text-primary focus:ring-primary"
+                                    type="checkbox" />
+                                <span class="text-xs text-slate-300">Bags</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 border-b border-border-dark pb-2">
+                            <span class="material-symbols-outlined text-slate-500">apparel</span>
+                            <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Head &amp; Neck</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="bg-surface border border-border-dark rounded-xl p-3 flex items-center gap-4 item-rarity-epic group hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_0_15px_#FFD00033] transition-all cursor-pointer">
+                                <div
+                                    class="size-12 rounded bg-background-dark p-0.5 border border-border-dark flex-shrink-0 relative overflow-hidden">
+                                    <img class="size-full rounded-sm" data-alt="Head slot item icon"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqqpHeCdtg_cszGOc4de3whbC-S3CGC0ZX3vMEI9ipzX1PnYmIIZALQqJrYSgLriEzg3giZeMmwr8uWiECFM1uzAN76m6QA9lu-JjOf6YUIIt9fjX8HQiB7nNDffLA-KwgsUhJmFzl4oNUdCiPPNiuS0SJeVn8MVxnATR4RHsf9z6mIkiR9ejpWJ9DmsJ2zUANq7MRO73zEGqCZsnWI4wVu8Z49q4hNkVo7Y8Tuea2TCkhcmGiEj6kZYAHRYN9WCcfAUt8EjpfUREE" />
+                                    <div
+                                        class="absolute bottom-0 right-0 bg-black/80 px-1 text-[9px] font-bold text-slate-100">
+                                        528</div>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="text-sm font-bold text-purple-400 truncate">Hood of the Haunted
+                                            Ritual</h4>
+                                        <span class="text-[10px] text-slate-500 font-bold">Equipped</span>
+                                    </div>
+                                    <p class="text-[11px] text-slate-400 mt-0.5">Haste/Vers • Tier Set (2/4)</p>
+                                </div>
+                                <div class="relative group/modal">
+                                    <button
+                                        class="size-8 rounded-lg bg-background-dark flex items-center justify-center text-primary border border-border-dark hover:bg-primary hover:text-background-dark transition-all">
+                                        <span class="material-symbols-outlined text-lg">add</span>
+                                    </button>
+                                    <div
+                                        class="absolute right-0 top-10 w-64 bg-surface border border-primary rounded-lg shadow-[0_0_15px_#FFD00033] z-[60] p-4 hidden group-hover/modal:block cursor-default text-left">
+                                        <h5
+                                            class="text-[10px] text-primary font-bold uppercase mb-3 border-b border-border-dark pb-1">
+                                            Upgrade Item</h5>
+                                        <div class="mb-3">
+                                            <label
+                                                class="text-[9px] text-slate-500 font-bold uppercase block mb-1">Upgrade
+                                                Tier</label>
+                                            <div class="flex gap-2">
+                                                <button
+                                                    class="flex-1 bg-background-dark border border-border-dark text-slate-400 text-xs py-1 rounded hover:border-primary">8/8</button>
+                                                <button
+                                                    class="flex-1 bg-primary/20 border border-primary text-primary font-bold text-xs py-1 rounded">12/12</button>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="text-[9px] text-slate-500 font-bold uppercase block mb-1">Gem
+                                                Slots</label>
+                                            <div class="flex gap-2">
+                                                <div
+                                                    class="size-6 rounded-full bg-background-dark border border-dashed border-slate-600 flex items-center justify-center cursor-pointer hover:border-primary">
+                                                    <span
+                                                        class="material-symbols-outlined text-[14px] text-slate-600">add</span>
+                                                </div>
+                                                <div
+                                                    class="size-6 rounded-full bg-slate-800 border border-primary flex items-center justify-center cursor-pointer overflow-hidden">
+                                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIOIYTudLdhVuWl2BMeh1CXY1xYHbTTF7Qj8ibAwEMYgnYXYB2hxLHWvwJtRPTZ3N_M50Zp4qpllecHUp1VEU3gyR_nc7VMaA-xfPCO7qPr_aMTCUexHHqBZivKLi_vtXBmS71N1J_GBr-cVAha2sSP_rt_PTmeVBma68KW73EVH1hL8aWgi4n_MCyljNP0CbHLZK_GwJHPKTvKiI--nfByg-u1Zn5kIo3vipQ8AvUkPR5iaooxBjyw0sRiAKHPsGXwzc6iWimO8HC"
+                                                        class="size-5" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label
+                                                class="text-[9px] text-slate-500 font-bold uppercase block mb-1">Enchantment</label>
+                                            <select
+                                                class="w-full bg-background-dark border border-border-dark text-xs font-bold rounded px-2 py-1 text-slate-300 focus:ring-primary focus:border-primary">
+                                                <option>None</option>
+                                                <option>Waking Stats (+150 Stats)</option>
+                                                <option>Devotion of Avoidance</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-surface border border-border-dark rounded-xl p-3 flex items-center gap-4 item-rarity-epic group hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_0_15px_#FFD00033] transition-all cursor-pointer">
+                                <div
+                                    class="size-12 rounded bg-background-dark p-0.5 border border-border-dark flex-shrink-0 relative overflow-hidden">
+                                    <img class="size-full rounded-sm" data-alt="Necklace item icon"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1JlE4GcR1JEHoxnWlBGX9aQizU0uYIyn3JSZu52Oeb7OdYILlY-Qi4OxQMJwO8eGNPFu2Ok6ZzJwaBBsRJ8M21wVpPi88h-uEGRA6WGryFG8V1bpP1kM0upLtJvgs7eKYvwmD3luChGHL8ZuUlOFl_pwwJ5D4hoqv79pYfxecc5sHo_hnoLXZVs3uz4KXeIUyLvx2H5R7OqpMX4uJPa0mxxjydaeIei-KIqMhfsfYpPAaqYSF-WUgxp2R3LVHRB2P-TzzzVCm3emI" />
+                                    <div
+                                        class="absolute bottom-0 right-0 bg-black/80 px-1 text-[9px] font-bold text-slate-100">
+                                        515</div>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="text-sm font-bold text-purple-400 truncate">Elemental Lariat</h4>
+                                        <span class="text-[10px] text-primary font-bold">In Bags</span>
+                                    </div>
+                                    <p class="text-[11px] text-slate-400 mt-0.5">Crit/Mastery • Crafted (Spark)</p>
+                                </div>
+                                <button
+                                    class="size-8 rounded-lg bg-background-dark flex items-center justify-center text-primary border border-border-dark hover:bg-primary hover:text-background-dark transition-all">
+                                    <span class="material-symbols-outlined text-lg">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 border-b border-border-dark pb-2">
+                            <span class="material-symbols-outlined text-slate-500">shield</span>
+                            <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Trinkets</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="bg-surface border border-border-dark rounded-xl p-3 flex items-center gap-4 item-rarity-legendary group hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_0_15px_#FFD00033] transition-all cursor-pointer relative overflow-hidden">
+                                <div class="absolute top-0 right-0 p-1">
+                                    <div
+                                        class="bg-primary/20 text-primary text-[9px] px-1.5 py-0.5 rounded font-bold uppercase">
+                                        Best in Slot</div>
+                                </div>
+                                <div
+                                    class="size-12 rounded bg-background-dark p-0.5 border border-border-dark flex-shrink-0 relative overflow-hidden">
+                                    <img class="size-full rounded-sm" data-alt="Legendary trinket icon"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdulz-jjvVx4Zg7IM9ZIAdZWAYTC-EIHNnEo4kynukreA9mnZuTM3pD_yLMISprFZm99jHo36dLi22YNwe31ucX8ggHN8GcOGnuN29mWE8zCCSRnY6_KOANyTVyTa76IJavM0ByTs5AZKzggVkBQu4uKzWP_IBkVZnW4MNjkwsQyTvxXUmoFOTpelNXnNqaZcJTtZAKE6u4EOJhS7V9hp_ZEKIgWgAmoZTBa0YcY3Vaax-XwfvfGras1hUOjUQ_przpz0IB-PyAh7K" />
+                                    <div
+                                        class="absolute bottom-0 right-0 bg-black/80 px-1 text-[9px] font-bold text-slate-100">
+                                        535</div>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="text-sm font-bold text-orange-400 truncate">Fyr'alath's Healing Core
+                                        </h4>
+                                        <span class="text-[10px] text-slate-500 font-bold">Equipped</span>
+                                    </div>
+                                    <p class="text-[11px] text-slate-400 mt-0.5">Proc: Burst Healing Intensity</p>
+                                </div>
+                                <button
+                                    class="size-8 rounded-lg bg-background-dark flex items-center justify-center text-primary border border-border-dark hover:bg-primary hover:text-background-dark transition-all">
+                                    <span class="material-symbols-outlined text-lg">add</span>
+                                </button>
+                            </div>
+                            <div
+                                class="bg-surface border border-border-dark rounded-xl p-3 flex items-center gap-4 item-rarity-epic group hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_0_15px_#FFD00033] transition-all cursor-pointer">
+                                <div
+                                    class="size-12 rounded bg-background-dark p-0.5 border border-border-dark flex-shrink-0 relative overflow-hidden">
+                                    <img class="size-full rounded-sm" data-alt="Trinket item icon"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlFO3CPurJYzwCDRW-8bvxnn-C6S6X-EDWNLnHp2WHukI4CkIbKMc3HewFDVxksgFO-dAFqR_lizNaCXGu5I2eyDkzsmXZd-o9IXbYXc7F2iFLZfzRrnDQZWhoNF-QoW5fxlWzl8Gku6s1P3Bm4ivUcZX1LZWQQeBgMcuN-Tz4pcJ1tptw0OTKUL4llcxnyuelodMpCx12Ivom3dJoYGZpMgT86R-PRHYd4hxh9p0cZYapczKRAJPcNIHUDCJblwj9Rq9XUNBqH1Jj" />
+                                    <div
+                                        class="absolute bottom-0 right-0 bg-black/80 px-1 text-[9px] font-bold text-slate-100">
+                                        515</div>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="text-sm font-bold text-purple-400 truncate">Smoldering Seedling</h4>
+                                        <span class="text-[10px] text-primary font-bold">In Bags</span>
+                                    </div>
+                                    <p class="text-[11px] text-slate-400 mt-0.5">Active: Redirect Overhealing</p>
+                                </div>
+                                <button
+                                    class="size-8 rounded-lg bg-background-dark flex items-center justify-center text-primary border border-border-dark hover:bg-primary hover:text-background-dark transition-all">
+                                    <span class="material-symbols-outlined text-lg">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 text-center">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">inventory_2</span>
+                        <h4 class="text-slate-100 font-bold">Select items to compare</h4>
+                        <p class="text-sm text-slate-400 max-w-sm mx-auto mt-2">Pick different gear setups, enchants, or
+                            talent variations to see which yields the highest healing throughput for your current
+                            encounter style.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-8 right-8 z-50">
+                <div
+                    class="bg-surface border border-border-dark rounded-xl shadow-2xl p-6 w-80 animate-in fade-in slide-in-from-bottom-4">
+                    <div class="flex items-center justify-between mb-4 border-b border-border-dark pb-3">
+                        <h4 class="font-bold text-sm text-slate-100">Copy &amp; Modify</h4>
+                        <button class="text-slate-500 hover:text-slate-100"><span
+                                class="material-symbols-outlined text-sm">close</span></button>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex flex-col gap-1.5">
+                            <label class="text-[10px] font-bold text-slate-500 uppercase">Upgrade Level</label>
+                            <div class="flex bg-background-dark rounded border border-border-dark overflow-hidden">
+                                <button
+                                    class="px-3 py-1 text-slate-400 border-r border-border-dark hover:bg-surface">-</button>
+                                <div class="flex-1 text-center py-1 text-sm font-bold text-primary">12/12 (Hero)</div>
+                                <button
+                                    class="px-3 py-1 text-slate-400 border-l border-border-dark hover:bg-surface">+</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <label class="text-[10px] font-bold text-slate-500 uppercase">Gems &amp; Enchants</label>
+                            <div
+                                class="flex items-center gap-2 p-2 bg-background-dark rounded border border-border-dark group cursor-pointer hover:border-primary transition-all">
+                                <div class="size-8 rounded bg-slate-800 flex items-center justify-center">
+                                    <img class="size-6" data-alt="Haste gem icon"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIOIYTudLdhVuWl2BMeh1CXY1xYHbTTF7Qj8ibAwEMYgnYXYB2hxLHWvwJtRPTZ3N_M50Zp4qpllecHUp1VEU3gyR_nc7VMaA-xfPCO7qPr_aMTCUexHHqBZivKLi_vtXBmS71N1J_GBr-cVAha2sSP_rt_PTmeVBma68KW73EVH1hL8aWgi4n_MCyljNP0CbHLZK_GwJHPKTvKiI--nfByg-u1Zn5kIo3vipQ8AvUkPR5iaooxBjyw0sRiAKHPsGXwzc6iWimO8HC" />
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-[11px] font-bold text-slate-200">Keen Ysemerald</p>
+                                    <p class="text-[9px] text-slate-500">+80 Haste / +40 Mastery</p>
+                                </div>
+                                <span class="material-symbols-outlined text-xs text-slate-600">edit</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full bg-primary text-background-dark py-2.5 rounded-lg font-bold text-sm hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm">copy_all</span> Create Variation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="w-80 border-l border-border-dark bg-surface flex flex-col">
+            <div class="p-6 flex flex-col h-full gap-6">
+                <div class="flex-1 space-y-6">
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">Simulation Status
+                        </h3>
+                        <div class="bg-background-dark rounded-xl p-4 border border-border-dark space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-slate-400">Iterations</span>
+                                <span class="text-xs font-mono text-slate-200">50,000</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-slate-400">Error Margin</span>
+                                <span class="text-xs font-mono text-green-500">±0.04%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-primary h-full w-full opacity-30"></div>
+                            </div>
+                            <div class="flex items-center gap-2 text-[10px] text-slate-500 italic">
+                                <span class="material-symbols-outlined text-[12px] text-green-500">check_circle</span>
+                                Engine Ready: Local Cache Valid
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">Insights &amp; Tips
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="bg-primary/5 border-l-2 border-primary p-3 rounded-r-lg">
+                                <div class="flex gap-2 items-start">
+                                    <span class="material-symbols-outlined text-primary text-lg">lightbulb</span>
+                                    <p class="text-[11px] leading-relaxed text-slate-300">Switching to <span
+                                            class="text-primary font-bold">Ramp Healing</span> profile for this length
+                                        will prioritize mana conservation talents.</p>
+                                </div>
+                            </div>
+                            <div class="bg-purple-500/5 border-l-2 border-purple-500 p-3 rounded-r-lg">
+                                <div class="flex gap-2 items-start">
+                                    <span class="material-symbols-outlined text-purple-400 text-lg">info</span>
+                                    <p class="text-[11px] leading-relaxed text-slate-300">You have 2 pieces of <span
+                                            class="text-purple-400 font-bold">Tier Set</span> missing. Droptimizer can
+                                        find upgrades.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div
+                        class="p-4 bg-background-dark rounded-xl border border-border-dark flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-500 uppercase">Selected Combinations</p>
+                            <p class="text-xl font-bold text-primary">12 <span
+                                    class="text-xs text-slate-400 font-normal">/ 150</span></p>
+                        </div>
+                        <span class="material-symbols-outlined text-slate-700 text-4xl">analytics</span>
+                    </div>
+                    <button onclick="window.location.href='processing.html'"
+                        class="w-full bg-primary py-4 rounded-xl font-bold text-background-dark shadow-xl hover:bg-primary/90 active:scale-95 transition-all flex items-center justify-center gap-3">
+                        <span class="material-symbols-outlined">play_arrow</span>
+                        RUN SIMULATION
+                    </button>
+                    <p class="text-center text-[10px] text-slate-600">Average wait time: ~12 seconds</p>
+                </div>
+            </div>
+        </aside>
+    </main>
 </body>
 
 </html>
